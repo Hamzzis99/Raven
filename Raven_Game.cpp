@@ -794,3 +794,17 @@ void Raven_Game::Render()
     }
   }
 }
+
+// 아이디 검색 부분 함수 구현
+Raven_Bot* Raven_Game::GetBotFromID(int id) const
+{
+    std::list<Raven_Bot*>::const_iterator it;
+    for (it = m_Bots.begin(); it != m_Bots.end(); ++it)
+    {
+        if ((*it)->ID() == id)
+        {
+            return *it;
+        }
+    }
+    return NULL;
+}

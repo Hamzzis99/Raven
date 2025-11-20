@@ -1,3 +1,4 @@
+//Raven_Bot.cpp
 #include "Raven_Bot.h"
 #include "misc/Cgdi.h"
 #include "misc/utils.h"
@@ -225,23 +226,40 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
   {
   case Msg_TakeThatMF:
 
-    //just return if already dead or spawning
-    if (isDead() || isSpawning()) return true;
+      // 이미 죽었거나 스폰 중이면 무시
+      if (isDead() || isSpawning()) return true;
 
-    //the extra info field of the telegram carries the amount of damage
-    ReduceHealth(DereferenceToType<int>(msg.ExtraInfo));
+      // 1. 체력 감소 (기존 로직)
+      ReduceHealth(DereferenceToType<int>(msg.ExtraInfo));
 
-    //if this bot is now dead let the shooter know
-    if (isDead())
-    {
-      Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
-                              ID(),
-                              msg.Sender,
-                              Msg_YouGotMeYouSOB,
-                              NO_ADDITIONAL_INFO);
-    }
+      // =======================================================
+      // [과제 구현] 피격 시 감각 시스템(Memory) 갱신 코드
+      // =======================================================
+      {
+          // ID를 이용해 나를 쏜 봇 객체(포인터)를 찾음
+          Raven_Bot* pShooter = m_pWorld->GetBotFromID(msg.Sender);
 
-    return true;
+          // 봇이 존재하고, 자해공갈이 아니라면
+          if (pShooter && pShooter != this)
+          {
+              int damage = DereferenceToType<int>(msg.ExtraInfo);
+              // 감각 메모리에 피해량 기록
+              GetSensoryMem()->UpdateWithDamage(pShooter, (double)damage);
+          }
+      }
+      // =======================================================
+
+      // 만약 이 공격으로 죽었다면 사수에게 알림 (기존 로직)
+      if (isDead())
+      {
+          Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+              ID(),
+              msg.Sender,
+              Msg_YouGotMeYouSOB,
+              NO_ADDITIONAL_INFO);
+      }
+
+      return true;
 
   case Msg_YouGotMeYouSOB:
     

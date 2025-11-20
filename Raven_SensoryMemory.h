@@ -1,3 +1,5 @@
+//Raven_SensoryMemory.h
+
 #ifndef RAVEN_SENSORY_SYSTEM_H
 #define RAVEN_SENSORY_SYSTEM_H
 #pragma warning (disable:4786)
@@ -17,43 +19,28 @@
 class Raven_Bot;
 
 
+// 보기 좋게 수정하자. 복잡해 영어설명들.
 class MemoryRecord
 {
 public:
-  
-  //records the time the opponent was last sensed (seen or heard). This
-  //is used to determine if a bot can 'remember' this record or not. 
-  //(if CurrentTime() - m_dTimeLastSensed is greater than the bot's
-  //memory span, the data in this record is made unavailable to clients)
-  double       fTimeLastSensed;
+    double fTimeLastSensed;
+    double fTimeBecameVisible;
+    double fTimeLastVisible;
+    Vector2D vLastSensedPosition;
+    bool bWithinFOV;
+    bool bShootable;
 
-  //it can be useful to know how long an opponent has been visible. This 
-  //variable is tagged with the current time whenever an opponent first becomes
-  //visible. It's then a simple matter to calculate how long the opponent has
-  //been in view (CurrentTime - fTimeBecameVisible)
-  double       fTimeBecameVisible;
+    // [추가] 누적 피해량 변수
+    double fAccumulatedDamage;
 
-  //it can also be useful to know the last time an opponent was seen
-  double       fTimeLastVisible;
-
-  //a vector marking the position where the opponent was last sensed. This can
-  // be used to help hunt down an opponent if it goes out of view
-  Vector2D    vLastSensedPosition;
-
-  //set to true if opponent is within the field of view of the owner
-  bool        bWithinFOV;
-
-  //set to true if there is no obstruction between the opponent and the owner, 
-  //permitting a shot.
-  bool        bShootable;
-  
-
-  MemoryRecord():fTimeLastSensed(-999),
-            fTimeBecameVisible(-999),
-            fTimeLastVisible(0),
-            bWithinFOV(false),
-            bShootable(false)
-  {}
+    MemoryRecord() :fTimeLastSensed(-999),
+        fTimeBecameVisible(-999),
+        fTimeLastVisible(0),
+        bWithinFOV(false),
+        bShootable(false),
+        fAccumulatedDamage(0.0) // [추가] 0으로 초기화
+    {
+    }
 };
 
 
@@ -111,6 +98,10 @@ public:
   std::list<Raven_Bot*> GetListOfRecentlySensedOpponents()const;
 
   void     RenderBoxesAroundRecentlySensed()const;
+
+  // [추가] 아래 두 함수 선언 추가
+  void UpdateWithDamage(Raven_Bot* pShooter, double DamageAmt);
+  double GetDamageCausedByOpponent(Raven_Bot* pOpponent)const;
 
 };
 

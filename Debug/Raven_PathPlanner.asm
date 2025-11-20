@@ -30,9 +30,9 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG213150 DB	'<Raven_PathPlanner::GetPathAsNodes>: no current search', 00H
+$SG213152 DB	'<Raven_PathPlanner::GetPathAsNodes>: no current search', 00H
 	ORG $+5
-$SG213151 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG213153 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'H', 00H, 'a', 00H, 'm', 00H, 'z'
 	DB	00H, 'z', 00H, 'i', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H
 	DB	'k', 00H, 't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'A', 00H, 'I'
@@ -51,7 +51,7 @@ $SG213151 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	00H, 'n', 00H, 'n', 00H, 'e', 00H, 'r', 00H, '.', 00H, 'c', 00H
 	DB	'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+6
-$SG213152 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
+$SG213154 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	'r', 00H, 'e', 00H, 'n', 00H, 't', 00H, 'S', 00H, 'e', 00H, 'a'
 	DB	00H, 'r', 00H, 'c', 00H, 'h', 00H, ' ', 00H, '&', 00H, '&', 00H
 	DB	' ', 00H, '"', 00H, '<', 00H, 'R', 00H, 'a', 00H, 'v', 00H, 'e'
@@ -64,10 +64,10 @@ $SG213152 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	00H, 'e', 00H, 'n', 00H, 't', 00H, ' ', 00H, 's', 00H, 'e', 00H
 	DB	'a', 00H, 'r', 00H, 'c', 00H, 'h', 00H, '"', 00H, 00H, 00H
 	ORG $+2
-$SG214014 DB	'<Raven_PathPlanner::CycleOnce>: No search object instant'
+$SG214016 DB	'<Raven_PathPlanner::CycleOnce>: No search object instant'
 	DB	'iated', 00H
 	ORG $+6
-$SG214015 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG214017 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'H', 00H, 'a', 00H, 'm', 00H, 'z'
 	DB	00H, 'z', 00H, 'i', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H
 	DB	'k', 00H, 't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'A', 00H, 'I'
@@ -86,7 +86,7 @@ $SG214015 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	00H, 'n', 00H, 'n', 00H, 'e', 00H, 'r', 00H, '.', 00H, 'c', 00H
 	DB	'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+6
-$SG214016 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
+$SG214018 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	'r', 00H, 'e', 00H, 'n', 00H, 't', 00H, 'S', 00H, 'e', 00H, 'a'
 	DB	00H, 'r', 00H, 'c', 00H, 'h', 00H, ' ', 00H, '&', 00H, '&', 00H
 	DB	' ', 00H, '"', 00H, '<', 00H, 'R', 00H, 'a', 00H, 'v', 00H, 'e'
@@ -99,19 +99,19 @@ $SG214016 DB	'm', 00H, '_', 00H, 'p', 00H, 'C', 00H, 'u', 00H, 'r', 00H
 	DB	00H, 'j', 00H, 'e', 00H, 'c', 00H, 't', 00H, ' ', 00H, 'i', 00H
 	DB	'n', 00H, 's', 00H, 't', 00H, 'a', 00H, 'n', 00H, 't', 00H, 'i'
 	DB	00H, 'a', 00H, 't', 00H, 'e', 00H, 'd', 00H, '"', 00H, 00H, 00H
-$SG231183 DB	'invalid argument', 00H
+$SG231185 DB	'invalid argument', 00H
 	ORG $+3
-$SG231184 DB	'%s', 00H
+$SG231186 DB	'%s', 00H
 	ORG $+1
-$SG231185 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG231187 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG232098 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG232100 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
-$SG217566 DB	'<SparseGraph::GetNode>: invalid index', 00H
+$SG217568 DB	'<SparseGraph::GetNode>: invalid index', 00H
 	ORG $+6
-$SG217567 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG217569 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'H', 00H, 'a', 00H, 'm', 00H, 'z'
 	DB	00H, 'z', 00H, 'i', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H
 	DB	'k', 00H, 't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'A', 00H, 'I'
@@ -124,7 +124,7 @@ $SG217567 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	00H, 'a', 00H, 'r', 00H, 's', 00H, 'e', 00H, 'G', 00H, 'r', 00H
 	DB	'a', 00H, 'p', 00H, 'h', 00H, '.', 00H, 'h', 00H, 00H, 00H
 	ORG $+6
-$SG217568 DB	'(', 00H, 'i', 00H, 'd', 00H, 'x', 00H, ' ', 00H, '<', 00H
+$SG217570 DB	'(', 00H, 'i', 00H, 'd', 00H, 'x', 00H, ' ', 00H, '<', 00H
 	DB	' ', 00H, '(', 00H, 'i', 00H, 'n', 00H, 't', 00H, ')', 00H, 'm'
 	DB	00H, '_', 00H, 'N', 00H, 'o', 00H, 'd', 00H, 'e', 00H, 's', 00H
 	DB	'.', 00H, 's', 00H, 'i', 00H, 'z', 00H, 'e', 00H, '(', 00H, ')'
@@ -3428,11 +3428,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG231183
-	push	OFFSET $SG231184
+	push	OFFSET $SG231185
+	push	OFFSET $SG231186
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG231185
+	push	OFFSET $SG231187
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -26303,13 +26303,13 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+8], 0
 	je	SHORT $LN6@CycleOnce
-	mov	ecx, OFFSET $SG214014
+	mov	ecx, OFFSET $SG214016
 	test	ecx, ecx
 	jne	SHORT $LN7@CycleOnce
 $LN6@CycleOnce:
 	push	249					; 000000f9H
-	push	OFFSET $SG214015
-	push	OFFSET $SG214016
+	push	OFFSET $SG214017
+	push	OFFSET $SG214018
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN7@CycleOnce:
@@ -26921,13 +26921,13 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+8], 0
 	je	SHORT $LN6@GetPath
-	mov	ecx, OFFSET $SG213150
+	mov	ecx, OFFSET $SG213152
 	test	ecx, ecx
 	jne	SHORT $LN7@GetPath
 $LN6@GetPath:
 	push	126					; 0000007eH
-	push	OFFSET $SG213151
-	push	OFFSET $SG213152
+	push	OFFSET $SG213153
+	push	OFFSET $SG213154
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN7@GetPath:
@@ -28954,13 +28954,13 @@ _idx$ = 8						; size = 4
 	jge	SHORT $LN3@GetNode
 	cmp	DWORD PTR _idx$[ebp], 0
 	jl	SHORT $LN3@GetNode
-	mov	eax, OFFSET $SG217566
+	mov	eax, OFFSET $SG217568
 	test	eax, eax
 	jne	SHORT $LN4@GetNode
 $LN3@GetNode:
 	push	449					; 000001c1H
-	push	OFFSET $SG217567
-	push	OFFSET $SG217568
+	push	OFFSET $SG217569
+	push	OFFSET $SG217570
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN4@GetNode:

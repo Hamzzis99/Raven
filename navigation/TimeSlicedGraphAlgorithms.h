@@ -79,9 +79,92 @@ public:
 
 
 
+////-------------------------- Graph_SearchAStar_TS -----------------------------
+////
+////  a A* class that enables a search to be completed over multiple update-steps
+////-----------------------------------------------------------------------------
+//template <class graph_type, class heuristic>
+//class Graph_SearchAStar_TS : public Graph_SearchTimeSliced<typename graph_type::EdgeType>
+//{
+//private:
+//  
+//  //create typedefs for the node and edge types used by the graph
+//  typedef typename graph_type::EdgeType Edge;
+//  typedef typename graph_type::NodeType Node;
+//
+//private:
+//
+//  const graph_type&              m_Graph;
+//
+//  //indexed into my node. Contains the 'real' accumulative cost to that node
+//  std::vector<double>            m_GCosts; 
+//
+//  //indexed into by node. Contains the cost from adding m_GCosts[n] to
+//  //the heuristic cost from n to the target node. This is the vector the
+//  //iPQ indexes into.
+//  std::vector<double>            m_FCosts;
+//
+//  std::vector<const Edge*>       m_ShortestPathTree;
+//  std::vector<const Edge*>       m_SearchFrontier;
+//
+//  int                            m_iSource;
+//  int                            m_iTarget;
+//
+//  //create an indexed priority queue of nodes. The nodes with the
+//  //lowest overall F cost (G+H) are positioned at the front.
+//  IndexedPriorityQLow<double>*    m_pPQ;
+//
+// 
+//public:
+//
+//  Graph_SearchAStar_TS(const graph_type& G,
+//                      int                source,
+//                      int                target):Graph_SearchTimeSliced<Edge>(AStar),
+//  
+//                                              m_Graph(G),
+//                                              m_ShortestPathTree(G.NumNodes()),                              
+//                                              m_SearchFrontier(G.NumNodes()),
+//                                              m_GCosts(G.NumNodes(), 0.0),
+//                                              m_FCosts(G.NumNodes(), 0.0),
+//                                              m_iSource(source),
+//                                              m_iTarget(target)
+//  { 
+//     //create the PQ   
+//     m_pPQ =new IndexedPriorityQLow<double>(m_FCosts, m_Graph.NumNodes());
+//
+//    //put the source node on the queue
+//    m_pPQ->insert(m_iSource);
+//  }
+//
+//   ~Graph_SearchAStar_TS(){delete m_pPQ;}
+//
+//
+//  //When called, this method pops the next node off the PQ and examines all
+//  //its edges. The method returns an enumerated value (target_found,
+//  //target_not_found, search_incomplete) indicating the status of the search
+//  int                      CycleOnce();
+//
+//  //returns the vector of edges that the algorithm has examined
+//  std::vector<const Edge*> GetSPT()const{return m_ShortestPathTree;}
+//
+//  //returns a vector of node indexes that comprise the shortest path
+//  //from the source to the target
+//  std::list<int>         GetPathToTarget()const;
+//
+//  //returns the path as a list of PathEdges
+//  std::list<PathEdge>    GetPathAsPathEdges()const;
+//
+//  //returns the total cost to the target
+//  double            GetCostToTarget()const{return m_GCosts[m_iTarget];}
+//};
+
+// [TimeSlicedGraphAlgorithms.h]
+// Graph_SearchAStar_TS 클래스 전체 교체
+
 //-------------------------- Graph_SearchAStar_TS -----------------------------
 //
-//  a A* class that enables a search to be completed over multiple update-steps
+//  A* class that enables a search to be completed over multiple update-steps
+//  [과제 구현] 검색 횟수 제한 초과 시 부분 경로(가장 가까운 노드) 반환 기능 추가
 //-----------------------------------------------------------------------------
 template <class graph_type, class heuristic>
 class Graph_SearchAStar_TS : public Graph_SearchTimeSliced<typename graph_type::EdgeType>
@@ -112,24 +195,35 @@ private:
 
   //create an indexed priority queue of nodes. The nodes with the
   //lowest overall F cost (G+H) are positioned at the front.
-  IndexedPriorityQLow<double>*    m_pPQ;
+  IndexedPriorityQLow<double>* m_pPQ;
+
+  // [과제 구현] 부분 경로 생성을 위한 추가 변수들
+  int                            m_iClosestNodeSoFar;       // 목표와 가장 가까운 노드 인덱스
+  double                         m_dSmallestHCostSoFar;     // 그 노드의 Heuristic 비용
+  int                            m_iNumCycles;              // 현재 사이클 횟수
+  const int                      m_iMaxSearchCycles;        // 최대 검색 허용 횟수
 
  
 public:
 
   Graph_SearchAStar_TS(const graph_type& G,
-                      int                source,
-                      int                target):Graph_SearchTimeSliced<Edge>(AStar),
+                       int                 source,
+                       int                 target):Graph_SearchTimeSliced<Edge>(Graph_SearchTimeSliced<Edge>::AStar),
   
-                                              m_Graph(G),
-                                              m_ShortestPathTree(G.NumNodes()),                              
-                                              m_SearchFrontier(G.NumNodes()),
-                                              m_GCosts(G.NumNodes(), 0.0),
-                                              m_FCosts(G.NumNodes(), 0.0),
-                                              m_iSource(source),
-                                              m_iTarget(target)
+                                       m_Graph(G),
+                                       m_ShortestPathTree(G.NumNodes()),                             
+                                       m_SearchFrontier(G.NumNodes()),
+                                       m_GCosts(G.NumNodes(), 0.0),
+                                       m_FCosts(G.NumNodes(), 0.0),
+                                       m_iSource(source),
+                                       m_iTarget(target),
+                                       // [과제 구현] 변수 초기화
+                                       m_iClosestNodeSoFar(source),
+                                       m_dSmallestHCostSoFar(MaxDouble),
+                                       m_iNumCycles(0),
+                                       m_iMaxSearchCycles(1000) // 1000번 돌면 포기하고 부분 경로 반환
   { 
-     //create the PQ   
+     //create the PQ    
      m_pPQ =new IndexedPriorityQLow<double>(m_FCosts, m_Graph.NumNodes());
 
     //put the source node on the queue
@@ -155,7 +249,7 @@ public:
   std::list<PathEdge>    GetPathAsPathEdges()const;
 
   //returns the total cost to the target
-  double            GetCostToTarget()const{return m_GCosts[m_iTarget];}
+  double             GetCostToTarget()const{return m_GCosts[m_iTarget];}
 };
 
 //-----------------------------------------------------------------------------
@@ -166,6 +260,14 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
   if (m_pPQ->empty())
   {
     return target_not_found;
+  }
+
+  // [과제 구현] 사이클 제한 체크
+  if (m_iNumCycles++ > m_iMaxSearchCycles)
+  {
+      // 목표를 지금까지 찾은 노드 중 가장 가까운 곳으로 변경 (부분 경로)
+      m_iTarget = m_iClosestNodeSoFar;
+      return target_found; // 성공한 척 반환
   }
 
   //get lowest cost node from the queue
@@ -180,13 +282,21 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
     return target_found;
   }
 
+  // [과제 구현] 현재 노드가 목표와 얼마나 가까운지 기록
+  double h_cost = heuristic::Calculate(m_Graph, m_iTarget, NextClosestNode);
+  if (h_cost < m_dSmallestHCostSoFar)
+  {
+      m_dSmallestHCostSoFar = h_cost;
+      m_iClosestNodeSoFar = NextClosestNode;
+  }
+
   //now to test all the edges attached to this node
   graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
   for (const Edge* pE=ConstEdgeItr.begin();
       !ConstEdgeItr.end();
        pE=ConstEdgeItr.next())
   {
-    //calculate the heuristic cost from this node to the target (H)                       
+    //calculate the heuristic cost from this node to the target (H)                        
     double HCost = heuristic::Calculate(m_Graph, m_iTarget, pE->To()); 
 
     //calculate the 'real' cost to this node from the source (G)
@@ -221,6 +331,70 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
   //there are still nodes to explore
   return search_incomplete;
 }
+
+////-----------------------------------------------------------------------------
+//template <class graph_type, class heuristic>
+//int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
+//{
+//  //if the PQ is empty the target has not been found
+//  if (m_pPQ->empty())
+//  {
+//    return target_not_found;
+//  }
+//
+//  //get lowest cost node from the queue
+//  int NextClosestNode = m_pPQ->Pop();
+//
+//  //put the node on the SPT
+//  m_ShortestPathTree[NextClosestNode] = m_SearchFrontier[NextClosestNode];
+//
+//  //if the target has been found exit
+//  if (NextClosestNode == m_iTarget)
+//  {
+//    return target_found;
+//  }
+//
+//  //now to test all the edges attached to this node
+//  graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
+//  for (const Edge* pE=ConstEdgeItr.begin();
+//      !ConstEdgeItr.end();
+//       pE=ConstEdgeItr.next())
+//  {
+//    //calculate the heuristic cost from this node to the target (H)                       
+//    double HCost = heuristic::Calculate(m_Graph, m_iTarget, pE->To()); 
+//
+//    //calculate the 'real' cost to this node from the source (G)
+//    double GCost = m_GCosts[NextClosestNode] + pE->Cost();
+//
+//    //if the node has not been added to the frontier, add it and update
+//    //the G and F costs
+//    if (m_SearchFrontier[pE->To()] == NULL)
+//    {
+//      m_FCosts[pE->To()] = GCost + HCost;
+//      m_GCosts[pE->To()] = GCost;
+//
+//      m_pPQ->insert(pE->To());
+//
+//      m_SearchFrontier[pE->To()] = pE;
+//    }
+//
+//    //if this node is already on the frontier but the cost to get here
+//    //is cheaper than has been found previously, update the node
+//    //costs and frontier accordingly.
+//    else if ((GCost < m_GCosts[pE->To()]) && (m_ShortestPathTree[pE->To()]==NULL))
+//    {
+//      m_FCosts[pE->To()] = GCost + HCost;
+//      m_GCosts[pE->To()] = GCost;
+//
+//      m_pPQ->ChangePriority(pE->To());
+//
+//      m_SearchFrontier[pE->To()] = pE;
+//    }
+//  }
+//  
+//  //there are still nodes to explore
+//  return search_incomplete;
+//}
 
 //-----------------------------------------------------------------------------
 template <class graph_type, class heuristic>

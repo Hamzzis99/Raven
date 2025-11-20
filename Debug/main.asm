@@ -21,8 +21,8 @@ _BSS	SEGMENT
 ?g_pRaven@@3PAVRaven_Game@@A DD 01H DUP (?)		; g_pRaven
 _BSS	ENDS
 _DATA	SEGMENT
-?g_szApplicationName@@3PADA DD FLAT:$SG210231		; g_szApplicationName
-?g_szWindowClassName@@3PADA DD FLAT:$SG210233		; g_szWindowClassName
+?g_szApplicationName@@3PADA DD FLAT:$SG210233		; g_szApplicationName
+?g_szWindowClassName@@3PADA DD FLAT:$SG210235		; g_szWindowClassName
 _DATA	ENDS
 CONST	SEGMENT
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -61,11 +61,10 @@ CONST	SEGMENT
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG210231 DB	'Raven', 00H
-$SG210310 DB	00H
+$SG210233 DB	'MyRaven', 00H
+$SG210235 DB	'MyWindowClass', 00H
+$SG210312 DB	00H
 	ORG $+1
-$SG210233 DB	'MyWindowClass', 00H
-	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
 	DD	0ff00H
@@ -81,27 +80,27 @@ $SG210233 DB	'MyWindowClass', 00H
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG210307 DB	'map', 00H
-$SG210308 DB	'Raven map file (*.map)', 00H
+$SG210309 DB	'map', 00H
+$SG210310 DB	'Raven map file (*.map)', 00H
 	ORG $+1
-$SG210309 DB	'Filename: ', 00H
+$SG210311 DB	'Filename: ', 00H
 	ORG $+1
-$SG210363 DB	'Error', 00H
+$SG210365 DB	'Error', 00H
 	ORG $+2
-$SG210364 DB	'Registration Failed!', 00H
+$SG210366 DB	'Registration Failed!', 00H
 	ORG $+3
-$SG210367 DB	'Error!', 00H
+$SG210369 DB	'Error!', 00H
 	ORG $+1
-$SG210368 DB	'CreateWindowEx Failed!', 00H
+$SG210370 DB	'CreateWindowEx Failed!', 00H
 	ORG $+1
-$SG219326 DB	'invalid argument', 00H
+$SG219328 DB	'invalid argument', 00H
 	ORG $+3
-$SG219327 DB	'%s', 00H
+$SG219329 DB	'%s', 00H
 	ORG $+1
-$SG219328 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG219330 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG220377 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG220379 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -3309,11 +3308,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG219326
-	push	OFFSET $SG219327
+	push	OFFSET $SG219328
+	push	OFFSET $SG219329
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG219328
+	push	OFFSET $SG219330
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -11998,11 +11997,11 @@ $LN22@WindowProc:
 ; 203  :           
 ; 204  :           FileOpenDlg(hwnd, szFileName, szTitleName, "Raven map file (*.map)", "map");
 
-	push	OFFSET $SG210307
+	push	OFFSET $SG210309
 	lea	ecx, DWORD PTR $T8[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	push	OFFSET $SG210308
+	push	OFFSET $SG210310
 	lea	ecx, DWORD PTR $T7[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
@@ -12027,9 +12026,9 @@ $LN22@WindowProc:
 ; 205  : 
 ; 206  :           debug_con << "Filename: " << szTitleName << "";
 
-	push	OFFSET $SG210310
+	push	OFFSET $SG210312
 	push	OFFSET ?szTitleName@?1??WindowProc@@YGJPAUHWND__@@IIJ@Z@4PADA
-	push	OFFSET $SG210309
+	push	OFFSET $SG210311
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY0L@D@DebugConsole@@QAEAAV0@AAY0L@$$CBD@Z ; DebugConsole::operator<<<char [11]>
@@ -27614,8 +27613,8 @@ _WinMain@16 PROC
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG210363
-	push	OFFSET $SG210364
+	push	OFFSET $SG210365
+	push	OFFSET $SG210366
 	push	0
 	call	DWORD PTR __imp__MessageBoxA@16
 	cmp	esi, esp
@@ -27702,8 +27701,8 @@ $LN6@WinMain:
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG210367
-	push	OFFSET $SG210368
+	push	OFFSET $SG210369
+	push	OFFSET $SG210370
 	push	0
 	call	DWORD PTR __imp__MessageBoxA@16
 	cmp	esi, esp

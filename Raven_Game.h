@@ -163,6 +163,9 @@ public:
   
   void  TagRaven_BotsWithinViewRange(BaseGameEntity* pRaven_Bot, double range)
               {TagNeighbors(pRaven_Bot, m_Bots, range);}  
+
+  // 봇 객체를 ID로 검색하는 함수.
+  Raven_Bot* GetBotFromID(int id) const;
 };
 
 

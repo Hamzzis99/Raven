@@ -1,3 +1,4 @@
+//Raven_SensoryMemory.cpp
 #include "Raven_SensoryMemory.h"
 #include "Raven_Game.h"
 #include "time/crudetimer.h"
@@ -278,4 +279,31 @@ void  Raven_SensoryMemory::RenderBoxesAroundRecentlySensed()const
     gdi->Line(p.x-b, p.y+b, p.x-b, p.y-b);
   }
 
+}
+
+//데미지 기록 업데이트 함수.
+void Raven_SensoryMemory::UpdateWithDamage(Raven_Bot* pShooter, double DamageAmt)
+{
+    // 자기 자신이 아닐 때만 기록
+    if (m_pOwner != pShooter)
+    {
+        MakeNewRecordIfNotAlreadyPresent(pShooter);
+        MemoryRecord& info = m_MemoryMap[pShooter];
+
+        // 피해량 누적
+        info.fAccumulatedDamage += DamageAmt;
+
+        // 공격받았으므로 '감지됨'으로 시간 갱신
+        info.fTimeLastSensed = Clock->GetCurrentTime();
+    }
+}
+
+double Raven_SensoryMemory::GetDamageCausedByOpponent(Raven_Bot* pOpponent)const
+{
+    MemoryMap::const_iterator it = m_MemoryMap.find(pOpponent);
+    if (it != m_MemoryMap.end())
+    {
+        return it->second.fAccumulatedDamage;
+    }
+    return 0.0;
 }
