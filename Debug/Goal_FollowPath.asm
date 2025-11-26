@@ -51,7 +51,7 @@ CONST	SEGMENT
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG209999 DB	'<Goal_FollowPath::Activate>: Unrecognized edge type', 00H
+$SG210006 DB	'<Goal_FollowPath::Activate>: Unrecognized edge type', 00H
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
 	DD	0ff00H
@@ -67,14 +67,14 @@ $SG209999 DB	'<Goal_FollowPath::Activate>: Unrecognized edge type', 00H
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG220120 DB	'invalid argument', 00H
+$SG220127 DB	'invalid argument', 00H
 	ORG $+3
-$SG220121 DB	'%s', 00H
+$SG220128 DB	'%s', 00H
 	ORG $+5
-$SG220122 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG220129 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG220791 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG220798 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1716,11 +1716,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG220120
-	push	OFFSET $SG220121
+	push	OFFSET $SG220127
+	push	OFFSET $SG220128
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG220122
+	push	OFFSET $SG220129
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -8529,7 +8529,7 @@ $LN8@Activate:
 ; 69   : 
 ; 70   :     throw std::runtime_error("<Goal_FollowPath::Activate>: Unrecognized edge type");
 
-	push	OFFSET $SG209999
+	push	OFFSET $SG210006
 	lea	ecx, DWORD PTR $T2[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@

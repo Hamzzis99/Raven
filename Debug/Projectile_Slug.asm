@@ -30,16 +30,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG208622 DB	'Slug_MaxForce', 00H
+$SG208624 DB	'Slug_MaxForce', 00H
 	ORG $+2
-$SG208623 DB	'Slug_Mass', 00H
+$SG208625 DB	'Slug_Mass', 00H
 	ORG $+2
-$SG208624 DB	'Slug_MaxSpeed', 00H
+$SG208626 DB	'Slug_MaxSpeed', 00H
 	ORG $+2
-$SG208625 DB	'Slug_Scale', 00H
+$SG208627 DB	'Slug_Scale', 00H
 	ORG $+1
-$SG208626 DB	'Slug_Damage', 00H
-$SG208627 DB	'Slug_Persistance', 00H
+$SG208628 DB	'Slug_Damage', 00H
+$SG208629 DB	'Slug_Persistance', 00H
 	ORG $+3
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -77,14 +77,14 @@ $SG208627 DB	'Slug_Persistance', 00H
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG218036 DB	'invalid argument', 00H
+$SG218038 DB	'invalid argument', 00H
 	ORG $+3
-$SG218037 DB	'%s', 00H
+$SG218039 DB	'%s', 00H
 	ORG $+1
-$SG218038 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218040 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG218670 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218672 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1369,11 +1369,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG218036
-	push	OFFSET $SG218037
+	push	OFFSET $SG218038
+	push	OFFSET $SG218039
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG218038
+	push	OFFSET $SG218040
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -6540,18 +6540,6 @@ _target$ = 12						; size = 16
 
 ; 20   :         Raven_Projectile(target,
 
-	push	OFFSET $SG208622
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG208623
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208624
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
@@ -6565,6 +6553,18 @@ _target$ = 12						; size = 16
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208626
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208627
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208628
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -6634,7 +6634,7 @@ _target$ = 12						; size = 16
 ; 30   : 
 ; 31   :         m_dTimeShotIsVisible(script->GetDouble("Slug_Persistance"))
 
-	push	OFFSET $SG208627
+	push	OFFSET $SG208629
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble

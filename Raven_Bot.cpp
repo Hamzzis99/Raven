@@ -346,12 +346,16 @@ bool Raven_Bot::RotateFacingTowardPosition(Vector2D target)
 void Raven_Bot::ReduceHealth(unsigned int val)
 {
   m_iHealth -= val;
+  bool infinite = true; // 무적 치트 활성화 여부
+  // [디버깅용 무적 치트] 체력이 10 이하라면 데미지를 입지 않음!
+  if (infinite == true) 
+  {
+        if (m_iHealth <= 10)
+     {
+      return; // 데미지 무시하고 함수 종료
+    }
+  }
 
-  //// [디버깅용 무적 치트] 체력이 10 이하라면 데미지를 입지 않음!
-  //if (m_iHealth <= 10)
-  //{
-  //    return; // 데미지 무시하고 함수 종료
-  //}
 
   m_iHealth -= val;
 

@@ -30,17 +30,17 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG207980 DB	'invalid argument', 00H
+$SG207982 DB	'invalid argument', 00H
 	ORG $+3
-$SG207981 DB	'%s', 00H
+$SG207983 DB	'%s', 00H
 	ORG $+5
-$SG207982 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG207984 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
-$SG200325 DB	'H: ', 00H
-$SG200326 DB	', ', 00H
+$SG200327 DB	'H: ', 00H
+$SG200328 DB	', ', 00H
 	ORG $+5
-$SG208593 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG208595 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -3277,7 +3277,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG208593
+	push	OFFSET $SG208595
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -4273,11 +4273,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG207980
-	push	OFFSET $SG207981
+	push	OFFSET $SG207982
+	push	OFFSET $SG207983
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG207982
+	push	OFFSET $SG207984
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -21052,7 +21052,7 @@ _pBot$ = 24						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR tv163[ebp]
 	push	ecx
-	push	OFFSET $SG200325
+	push	OFFSET $SG200327
 	lea	edx, DWORD PTR $T10[ebp]
 	push	edx
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QBD$$QAV10@@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
@@ -21118,7 +21118,7 @@ _pBot$ = 24						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	mov	ecx, DWORD PTR tv167[ebp]
 	push	ecx
-	push	OFFSET $SG200326
+	push	OFFSET $SG200328
 	push	2
 	lea	edx, DWORD PTR $T4[ebp]
 	push	edx

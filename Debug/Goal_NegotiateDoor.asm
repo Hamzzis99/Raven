@@ -66,14 +66,14 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG219057 DB	'invalid argument', 00H
+$SG219064 DB	'invalid argument', 00H
 	ORG $+3
-$SG219058 DB	'%s', 00H
+$SG219065 DB	'%s', 00H
 	ORG $+1
-$SG219059 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG219066 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG219704 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG219711 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1433,11 +1433,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG219057
-	push	OFFSET $SG219058
+	push	OFFSET $SG219064
+	push	OFFSET $SG219065
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG219059
+	push	OFFSET $SG219066
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H

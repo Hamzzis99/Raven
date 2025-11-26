@@ -17,14 +17,14 @@ _BSS	ENDS
 CONST	SEGMENT
 ?piecewise_construct@std@@3Upiecewise_construct_t@1@B	ORG $+1 ; std::piecewise_construct
 	ORG $+3
-$SG223648 DB	'invalid argument', 00H
+$SG223652 DB	'invalid argument', 00H
 	ORG $+3
-$SG223649 DB	'%s', 00H
+$SG223653 DB	'%s', 00H
 	ORG $+5
-$SG223650 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG223654 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG224351 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG224355 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
@@ -78,12 +78,12 @@ $SG224351 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG212794 DB	'RailGun_MaxRoundsCarried', 00H
+$SG212798 DB	'RailGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG212796 DB	'RocketLauncher_MaxRoundsCarried', 00H
-$SG212798 DB	'ShotGun_MaxRoundsCarried', 00H
+$SG212800 DB	'RocketLauncher_MaxRoundsCarried', 00H
+$SG212802 DB	'ShotGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG212801 DB	'trying to calculate  of unknown weapon', 00H
+$SG212805 DB	'trying to calculate  of unknown weapon', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -866,11 +866,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG223648
-	push	OFFSET $SG223649
+	push	OFFSET $SG223652
+	push	OFFSET $SG223653
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG223650
+	push	OFFSET $SG223654
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -2570,7 +2570,7 @@ $LN4@GetMaxRoun:
 ; 40   : 
 ; 41   :     return script->GetDouble("RailGun_MaxRoundsCarried");
 
-	push	OFFSET $SG212794
+	push	OFFSET $SG212798
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -2582,7 +2582,7 @@ $LN5@GetMaxRoun:
 ; 44   : 
 ; 45   :     return script->GetDouble("RocketLauncher_MaxRoundsCarried");
 
-	push	OFFSET $SG212796
+	push	OFFSET $SG212800
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -2594,7 +2594,7 @@ $LN6@GetMaxRoun:
 ; 48   : 
 ; 49   :     return script->GetDouble("ShotGun_MaxRoundsCarried");
 
-	push	OFFSET $SG212798
+	push	OFFSET $SG212802
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -2606,7 +2606,7 @@ $LN7@GetMaxRoun:
 ; 52   : 
 ; 53   :     throw std::runtime_error("trying to calculate  of unknown weapon");
 
-	push	OFFSET $SG212801
+	push	OFFSET $SG212805
 	lea	ecx, DWORD PTR $T1[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@

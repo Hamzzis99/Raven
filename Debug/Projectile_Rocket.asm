@@ -30,16 +30,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG208628 DB	'Rocket_MaxForce', 00H
-$SG208629 DB	'Rocket_Mass', 00H
-$SG208630 DB	'Rocket_MaxSpeed', 00H
-$SG208631 DB	'Rocket_Scale', 00H
+$SG208630 DB	'Rocket_MaxForce', 00H
+$SG208631 DB	'Rocket_Mass', 00H
+$SG208632 DB	'Rocket_MaxSpeed', 00H
+$SG208633 DB	'Rocket_Scale', 00H
 	ORG $+3
-$SG208632 DB	'Rocket_Damage', 00H
+$SG208634 DB	'Rocket_Damage', 00H
 	ORG $+2
-$SG208633 DB	'Rocket_BlastRadius', 00H
+$SG208635 DB	'Rocket_BlastRadius', 00H
 	ORG $+5
-$SG208634 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG208636 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'H', 00H, 'a', 00H, 'm', 00H, 'z'
 	DB	00H, 'z', 00H, 'i', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H
 	DB	'k', 00H, 't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'A', 00H, 'I'
@@ -57,12 +57,12 @@ $SG208634 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'_', 00H, 'R', 00H, 'o', 00H, 'c', 00H, 'k', 00H, 'e', 00H, 't'
 	DB	00H, '.', 00H, 'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+2
-$SG208635 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
+$SG208637 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
 	DB	' ', 00H, '!', 00H, '=', 00H, ' ', 00H, 'V', 00H, 'e', 00H, 'c'
 	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, '2', 00H, 'D', 00H, '(', 00H
 	DB	')', 00H, 00H, 00H
 	ORG $+2
-$SG208649 DB	'Rocket_ExplosionDecayRate', 00H
+$SG208651 DB	'Rocket_ExplosionDecayRate', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -100,14 +100,14 @@ $SG208649 DB	'Rocket_ExplosionDecayRate', 00H
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG217988 DB	'invalid argument', 00H
+$SG217990 DB	'invalid argument', 00H
 	ORG $+3
-$SG217989 DB	'%s', 00H
+$SG217991 DB	'%s', 00H
 	ORG $+1
-$SG217990 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217992 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG218622 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218624 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1368,11 +1368,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG217988
-	push	OFFSET $SG217989
+	push	OFFSET $SG217990
+	push	OFFSET $SG217991
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG217990
+	push	OFFSET $SG217992
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -5576,7 +5576,7 @@ $LN2@Update:
 ; 54   :   {
 ; 55   :     m_dCurrentBlastRadius += script->GetDouble("Rocket_ExplosionDecayRate");
 
-	push	OFFSET $SG208649
+	push	OFFSET $SG208651
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -5773,18 +5773,6 @@ _target$ = 12						; size = 16
 
 ; 18   :         Raven_Projectile(target,
 
-	push	OFFSET $SG208628
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG208629
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208630
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
@@ -5798,6 +5786,18 @@ _target$ = 12						; size = 16
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208632
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208633
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208634
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -5857,7 +5857,7 @@ _target$ = 12						; size = 16
 
 ; 30   :        m_dBlastRadius(script->GetDouble("Rocket_BlastRadius"))
 
-	push	OFFSET $SG208633
+	push	OFFSET $SG208635
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -5891,8 +5891,8 @@ _target$ = 12						; size = 16
 	test	ecx, ecx
 	jne	SHORT $LN3@Rocket
 	push	32					; 00000020H
-	push	OFFSET $SG208634
-	push	OFFSET $SG208635
+	push	OFFSET $SG208636
+	push	OFFSET $SG208637
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN3@Rocket:

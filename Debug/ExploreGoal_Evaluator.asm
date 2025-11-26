@@ -30,13 +30,13 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG209127 DB	'EX: ', 00H
+$SG209133 DB	'EX: ', 00H
 	ORG $+3
-$SG218454 DB	'invalid argument', 00H
+$SG218460 DB	'invalid argument', 00H
 	ORG $+3
-$SG218455 DB	'%s', 00H
+$SG218461 DB	'%s', 00H
 	ORG $+5
-$SG218456 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218462 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -75,7 +75,7 @@ $SG218456 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG219111 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG219117 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -3186,7 +3186,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG219111
+	push	OFFSET $SG219117
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -4152,11 +4152,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG218454
-	push	OFFSET $SG218455
+	push	OFFSET $SG218460
+	push	OFFSET $SG218461
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG218456
+	push	OFFSET $SG218462
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -20769,7 +20769,7 @@ _pBot$ = 24						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR tv90[ebp]
 	push	ecx
-	push	OFFSET $SG209127
+	push	OFFSET $SG209133
 	lea	edx, DWORD PTR $T3[ebp]
 	push	edx
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QBD$$QAV10@@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >

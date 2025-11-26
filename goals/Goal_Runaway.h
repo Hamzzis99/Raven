@@ -8,9 +8,6 @@
 
 #include "../Raven_Bot.h"
 
-// ------------------------------------------------------------------------
-//  [Goal Class] Goal_RunAway (선언부)
-// ------------------------------------------------------------------------
 class Goal_RunAway : public Goal_Composite<Raven_Bot>
 {
 private:
@@ -30,9 +27,6 @@ public:
     void Render();
 };
 
-// ------------------------------------------------------------------------
-//  [Evaluator Class] RunAway_Evaluator (선언부)
-// ------------------------------------------------------------------------
 class RunAway_Evaluator : public Goal_Evaluator
 {
 public:

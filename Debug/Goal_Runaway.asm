@@ -24144,7 +24144,7 @@ _pBot$ = 24						; size = 4
 ?RenderInfo@RunAway_Evaluator@@UAEXUVector2D@@PAVRaven_Bot@@@Z PROC ; RunAway_Evaluator::RenderInfo
 ; _this$ = ecx
 
-; 129  : {
+; 125  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24169,8 +24169,8 @@ _pBot$ = 24						; size = 4
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 130  :     // 봇 머리 위에 점수 띄우기 (디버깅용)
-; 131  :     gdi->TextAtPos(Position, "RUN: " + ttos(CalculateDesirability(pBot), 2));
+; 126  :     // 봇 머리 위에 점수 띄우기 (디버깅용)
+; 127  :     gdi->TextAtPos(Position, "RUN: " + ttos(CalculateDesirability(pBot), 2));
 
 	mov	esi, esp
 	mov	eax, DWORD PTR _pBot$[ebp]
@@ -24228,7 +24228,7 @@ _pBot$ = 24						; size = 4
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
 
-; 132  : }
+; 128  : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -24280,7 +24280,7 @@ _pBot$ = 8						; size = 4
 ?SetGoal@RunAway_Evaluator@@UAEXPAVRaven_Bot@@@Z PROC	; RunAway_Evaluator::SetGoal
 ; _this$ = ecx
 
-; 123  : {
+; 119  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24288,8 +24288,8 @@ _pBot$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 124  :     // Goal_Think의 함수 호출
-; 125  :     pBot->GetBrain()->AddGoal_RunAway();
+; 120  :     // Goal_Think의 함수 호출
+; 121  :     pBot->GetBrain()->AddGoal_RunAway();
 
 	mov	ecx, DWORD PTR _pBot$[ebp]
 	call	?GetBrain@Raven_Bot@@QAEQAVGoal_Think@@XZ ; Raven_Bot::GetBrain
@@ -24297,7 +24297,7 @@ _pBot$ = 8						; size = 4
 	call	?AddGoal_RunAway@Goal_Think@@QAEXXZ	; Goal_Think::AddGoal_RunAway
 	npad	1
 
-; 126  : }
+; 122  : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -24315,7 +24315,7 @@ _pBot$ = 8						; size = 4
 ?CalculateDesirability@RunAway_Evaluator@@UAENPAVRaven_Bot@@@Z PROC ; RunAway_Evaluator::CalculateDesirability
 ; _this$ = ecx
 
-; 112  : {
+; 108  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24323,30 +24323,30 @@ _pBot$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 113  :     // [과제 조건] 체력이 30 이하면 무조건 발동
-; 114  :     if (pBot->Health() <= 30)
+; 109  :     // [과제 조건] 체력이 30 이하면 무조건 발동
+; 110  :     if (pBot->Health() <= 30)
 
 	mov	ecx, DWORD PTR _pBot$[ebp]
 	call	?Health@Raven_Bot@@QBEHXZ		; Raven_Bot::Health
 	cmp	eax, 30					; 0000001eH
 	jg	SHORT $LN2@CalculateD
 
-; 115  :     {
-; 116  :         // 100점 만점에 가까운 점수를 줘서 다른 행동을 압도함
-; 117  :         return m_dCharacterBias;
+; 111  :     {
+; 112  :         // 100점 만점에 가까운 점수를 줘서 다른 행동을 압도함
+; 113  :         return m_dCharacterBias;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	fld	QWORD PTR [eax+8]
 	jmp	SHORT $LN1@CalculateD
 $LN2@CalculateD:
 
-; 118  :     }
-; 119  :     return 0.0;
+; 114  :     }
+; 115  :     return 0.0;
 
 	fldz
 $LN1@CalculateD:
 
-; 120  : }
+; 116  : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -24418,7 +24418,7 @@ _this$ = -4						; size = 4
 ?Render@Goal_RunAway@@UAEXXZ PROC			; Goal_RunAway::Render
 ; _this$ = ecx
 
-; 97   : {
+; 93   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24431,21 +24431,21 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 98   :     if (m_iStatus == active)
+; 94   :     if (m_iStatus == active)
 
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+12], 0
 	jne	$LN2@Render
 
-; 99   :     {
-; 100  :         gdi->RedPen();
+; 95   :     {
+; 96   :         gdi->RedPen();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?RedPen@Cgdi@@QAEXXZ			; Cgdi::RedPen
 	npad	1
 
-; 101  :         gdi->Line(m_pOwner->Pos(), m_vCurrentTarget); // 빨간 선 표시
+; 97   :         gdi->Line(m_pOwner->Pos(), m_vCurrentTarget); // 빨간 선 표시
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
@@ -24479,7 +24479,7 @@ _this$ = -4						; size = 4
 	call	?Line@Cgdi@@QAEXUVector2D@@0@Z		; Cgdi::Line
 	npad	1
 
-; 102  :         gdi->Circle(m_vCurrentTarget, 5);
+; 98   :         gdi->Circle(m_vCurrentTarget, 5);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __real@4014000000000000
@@ -24502,14 +24502,14 @@ _this$ = -4						; size = 4
 	npad	1
 $LN2@Render:
 
-; 103  :     }
-; 104  :     Goal_Composite<Raven_Bot>::Render();
+; 99   :     }
+; 100  :     Goal_Composite<Raven_Bot>::Render();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?Render@?$Goal_Composite@VRaven_Bot@@@@UAEXXZ ; Goal_Composite<Raven_Bot>::Render
 	npad	1
 
-; 105  : }
+; 101  : }
 
 	add	esp, 20					; 00000014H
 	cmp	ebp, esp
@@ -24528,7 +24528,7 @@ _msg$ = 8						; size = 4
 ?HandleMessage@Goal_RunAway@@UAE_NABUTelegram@@@Z PROC	; Goal_RunAway::HandleMessage
 ; _this$ = ecx
 
-; 86   : {
+; 82   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24538,9 +24538,9 @@ _msg$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 87   :     // [중요] 하위 목표(이동)에게 "길 찾았어!" 메시지 전달
-; 88   :     // 이게 없으면 봇이 멍때림
-; 89   :     if (!m_SubGoals.empty())
+; 83   :     // [중요] 하위 목표(이동)에게 "길 찾았어!" 메시지 전달
+; 84   :     // 이게 없으면 봇이 멍때림
+; 85   :     if (!m_SubGoals.empty())
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -24549,8 +24549,8 @@ _msg$ = 8						; size = 4
 	test	eax, eax
 	jne	SHORT $LN2@HandleMess
 
-; 90   :     {
-; 91   :         return m_SubGoals.front()->HandleMessage(msg);
+; 86   :     {
+; 87   :         return m_SubGoals.front()->HandleMessage(msg);
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 16					; 00000010H
@@ -24570,13 +24570,13 @@ _msg$ = 8						; size = 4
 	jmp	SHORT $LN1@HandleMess
 $LN2@HandleMess:
 
-; 92   :     }
-; 93   :     return false;
+; 88   :     }
+; 89   :     return false;
 
 	xor	al, al
 $LN1@HandleMess:
 
-; 94   : }
+; 90   : }
 
 	pop	esi
 	add	esp, 8
@@ -24594,19 +24594,19 @@ _this$ = -4						; size = 4
 ?Terminate@Goal_RunAway@@UAEXXZ PROC			; Goal_RunAway::Terminate
 ; _this$ = ecx
 
-; 81   : {
+; 77   : {
 
 	push	ebp
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 82   :     m_iStatus = completed;
+; 78   :     m_iStatus = completed;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 2
 
-; 83   : }
+; 79   : }
 
 	mov	esp, ebp
 	pop	ebp
@@ -24620,7 +24620,7 @@ _this$ = -4						; size = 4
 ?Process@Goal_RunAway@@UAEHXZ PROC			; Goal_RunAway::Process
 ; _this$ = ecx
 
-; 70   : {
+; 66   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24628,21 +24628,21 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 71   :     ActivateIfInactive();
+; 67   :     ActivateIfInactive();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ActivateIfInactive@?$Goal@VRaven_Bot@@@@IAEXXZ ; Goal<Raven_Bot>::ActivateIfInactive
 
-; 72   :     m_iStatus = ProcessSubgoals();
+; 68   :     m_iStatus = ProcessSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ProcessSubgoals@?$Goal_Composite@VRaven_Bot@@@@IAEHXZ ; Goal_Composite<Raven_Bot>::ProcessSubgoals
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], eax
 
-; 73   : 
-; 74   :     // 이동 실패해도 완료 처리해서 다시 생각하게 만듦 (무한 시도)
-; 75   :     if (m_iStatus == failed) m_iStatus = completed;
+; 69   : 
+; 70   :     // 이동 실패해도 완료 처리해서 다시 생각하게 만듦 (무한 시도)
+; 71   :     if (m_iStatus == failed) m_iStatus = completed;
 
 	mov	edx, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [edx+12], 3
@@ -24651,13 +24651,13 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [eax+12], 2
 $LN2@Process:
 
-; 76   : 
-; 77   :     return m_iStatus;
+; 72   : 
+; 73   :     return m_iStatus;
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [ecx+12]
 
-; 78   : }
+; 74   : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -24692,7 +24692,7 @@ __$EHRec$ = -12						; size = 12
 ?Activate@Goal_RunAway@@UAEXXZ PROC			; Goal_RunAway::Activate
 ; _this$ = ecx
 
-; 21   : {
+; 17   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -24716,43 +24716,43 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 22   :     m_iStatus = active;
+; 18   :     m_iStatus = active;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 0
 
-; 23   :     RemoveAllSubgoals();
+; 19   :     RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 24   : 
-; 25   :     // 1. 현재 나를 노리는 적(Target) 확인
-; 26   :     Raven_Bot* pTarget = m_pOwner->GetTargetBot();
+; 20   : 
+; 21   :     // 1. 현재 나를 노리는 적(Target) 확인
+; 22   :     Raven_Bot* pTarget = m_pOwner->GetTargetBot();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
 	call	?GetTargetBot@Raven_Bot@@QBEQAV1@XZ	; Raven_Bot::GetTargetBot
 	mov	DWORD PTR _pTarget$[ebp], eax
 
-; 27   :     Vector2D HidingSpot;
+; 23   :     Vector2D HidingSpot;
 
 	lea	ecx, DWORD PTR _HidingSpot$[ebp]
 	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
 
-; 28   :     bool bFoundSpot = false;
+; 24   :     bool bFoundSpot = false;
 
 	mov	BYTE PTR _bFoundSpot$[ebp], 0
 
-; 29   : 
-; 30   :     // 2. 적이 있다면 "적이 못 보는 곳"을 찾는다 (Raycast 검사)
-; 31   :     if (pTarget)
+; 25   : 
+; 26   :     // 2. 적이 있다면 "적이 못 보는 곳"을 찾는다 (Raycast 검사)
+; 27   :     if (pTarget)
 
 	cmp	DWORD PTR _pTarget$[ebp], 0
 	je	$LN3@Activate
 
-; 32   :     {
-; 33   :         const std::vector<Vector2D>& SpawnPoints = m_pOwner->GetWorld()->GetMap()->GetSpawnPoints();
+; 28   :     {
+; 29   :         const std::vector<Vector2D>& SpawnPoints = m_pOwner->GetWorld()->GetMap()->GetSpawnPoints();
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx+8]
@@ -24763,9 +24763,9 @@ __$EHRec$ = -12						; size = 12
 	call	?GetSpawnPoints@Raven_Map@@QBEABV?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@XZ ; Raven_Map::GetSpawnPoints
 	mov	DWORD PTR _SpawnPoints$13[ebp], eax
 
-; 34   : 
-; 35   :         // 20번 정도 랜덤하게 찍어서 숨을 곳을 찾아봄
-; 36   :         for (int i = 0; i < 20; ++i)
+; 30   : 
+; 31   :         // 20번 정도 랜덤하게 찍어서 숨을 곳을 찾아봄
+; 32   :         for (int i = 0; i < 20; ++i)
 
 	mov	DWORD PTR _i$12[ebp], 0
 	jmp	SHORT $LN4@Activate
@@ -24777,8 +24777,8 @@ $LN4@Activate:
 	cmp	DWORD PTR _i$12[ebp], 20		; 00000014H
 	jge	$LN3@Activate
 
-; 37   :         {
-; 38   :             int idx = RandInt(0, SpawnPoints.size() - 1);
+; 33   :         {
+; 34   :             int idx = RandInt(0, SpawnPoints.size() - 1);
 
 	mov	ecx, DWORD PTR _SpawnPoints$13[ebp]
 	call	?size@?$vector@UVector2D@@V?$allocator@UVector2D@@@std@@@std@@QBEIXZ ; std::vector<Vector2D,std::allocator<Vector2D> >::size
@@ -24789,7 +24789,7 @@ $LN4@Activate:
 	add	esp, 8
 	mov	DWORD PTR _idx$11[ebp], eax
 
-; 39   :             Vector2D Candidate = SpawnPoints[idx];
+; 35   :             Vector2D Candidate = SpawnPoints[idx];
 
 	mov	ecx, DWORD PTR _idx$11[ebp]
 	push	ecx
@@ -24804,9 +24804,9 @@ $LN4@Activate:
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR _Candidate$10[ebp+12], eax
 
-; 40   : 
-; 41   :             // isLOSOkay가 false면 시야가 벽에 막혔다는 뜻 -> 숨기 좋은 곳!
-; 42   :             if (m_pOwner->GetWorld()->isLOSOkay(pTarget->Pos(), Candidate) == false)
+; 36   : 
+; 37   :             // isLOSOkay가 false면 시야가 벽에 막혔다는 뜻 -> 숨기 좋은 곳!
+; 38   :             if (m_pOwner->GetWorld()->isLOSOkay(pTarget->Pos(), Candidate) == false)
 
 	sub	esp, 16					; 00000010H
 	mov	ecx, esp
@@ -24841,8 +24841,8 @@ $LN4@Activate:
 	test	edx, edx
 	jne	SHORT $LN6@Activate
 
-; 43   :             {
-; 44   :                 HidingSpot = Candidate;
+; 39   :             {
+; 40   :                 HidingSpot = Candidate;
 
 	mov	eax, DWORD PTR _Candidate$10[ebp]
 	mov	DWORD PTR _HidingSpot$[ebp], eax
@@ -24853,32 +24853,32 @@ $LN4@Activate:
 	mov	eax, DWORD PTR _Candidate$10[ebp+12]
 	mov	DWORD PTR _HidingSpot$[ebp+12], eax
 
-; 45   :                 bFoundSpot = true;
+; 41   :                 bFoundSpot = true;
 
 	mov	BYTE PTR _bFoundSpot$[ebp], 1
 
-; 46   :                 break; // 찾았으면 루프 종료
+; 42   :                 break; // 찾았으면 루프 종료
 
 	jmp	SHORT $LN3@Activate
 $LN6@Activate:
 
-; 47   :             }
-; 48   :         }
+; 43   :             }
+; 44   :         }
 
 	jmp	$LN2@Activate
 $LN3@Activate:
 
-; 49   :     }
-; 50   : 
-; 51   :     // 3. 적이 없거나 마땅히 숨을 곳 못 찾았으면 랜덤 위치로 도주
-; 52   :     if (!bFoundSpot)
+; 45   :     }
+; 46   : 
+; 47   :     // 3. 적이 없거나 마땅히 숨을 곳 못 찾았으면 랜덤 위치로 도주
+; 48   :     if (!bFoundSpot)
 
 	movzx	ecx, BYTE PTR _bFoundSpot$[ebp]
 	test	ecx, ecx
 	jne	SHORT $LN7@Activate
 
-; 53   :     {
-; 54   :         HidingSpot = m_pOwner->GetWorld()->GetMap()->GetRandomSpawnPoint();
+; 49   :     {
+; 50   :         HidingSpot = m_pOwner->GetWorld()->GetMap()->GetRandomSpawnPoint();
 
 	lea	edx, DWORD PTR $T8[ebp]
 	push	edx
@@ -24899,10 +24899,10 @@ $LN3@Activate:
 	mov	DWORD PTR _HidingSpot$[ebp+12], edx
 $LN7@Activate:
 
-; 55   :     }
-; 56   : 
-; 57   :     // 4. 너무 가까우면(제자리) 살짝 옆으로 이동 (버그 방지)
-; 58   :     if (m_pOwner->Pos().DistanceSq(HidingSpot) < 100.0)
+; 51   :     }
+; 52   : 
+; 53   :     // 4. 너무 가까우면(제자리) 살짝 옆으로 이동 (버그 방지)
+; 54   :     if (m_pOwner->Pos().DistanceSq(HidingSpot) < 100.0)
 
 	lea	eax, DWORD PTR _HidingSpot$[ebp]
 	push	eax
@@ -24918,8 +24918,8 @@ $LN7@Activate:
 	comisd	xmm0, QWORD PTR tv328[ebp]
 	jbe	SHORT $LN8@Activate
 
-; 59   :     {
-; 60   :         HidingSpot = m_pOwner->Pos() + Vector2D(50, 50);
+; 55   :     {
+; 56   :         HidingSpot = m_pOwner->Pos() + Vector2D(50, 50);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __real@4049000000000000
@@ -24950,9 +24950,9 @@ $LN7@Activate:
 	mov	DWORD PTR _HidingSpot$[ebp+12], edx
 $LN8@Activate:
 
-; 61   :     }
-; 62   : 
-; 63   :     m_vCurrentTarget = HidingSpot;
+; 57   :     }
+; 58   : 
+; 59   :     m_vCurrentTarget = HidingSpot;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	add	eax, 32					; 00000020H
@@ -24965,9 +24965,9 @@ $LN8@Activate:
 	mov	edx, DWORD PTR _HidingSpot$[ebp+12]
 	mov	DWORD PTR [eax+12], edx
 
-; 64   : 
-; 65   :     // 5. 이동 명령 내리기
-; 66   :     AddSubgoal(new Goal_MoveToPosition(m_pOwner, m_vCurrentTarget));
+; 60   : 
+; 61   :     // 5. 이동 명령 내리기
+; 62   :     AddSubgoal(new Goal_MoveToPosition(m_pOwner, m_vCurrentTarget));
 
 	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
@@ -25013,7 +25013,7 @@ $LN11@Activate:
 	call	__RTC_CheckEsp
 	npad	1
 
-; 67   : }
+; 63   : }
 
 	push	edx
 	mov	ecx, ebp
@@ -25102,7 +25102,7 @@ _pBot$ = 8						; size = 4
 ??0Goal_RunAway@@QAE@PAVRaven_Bot@@@Z PROC		; Goal_RunAway::Goal_RunAway
 ; _this$ = ecx
 
-; 17   : {
+; 13   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -25119,7 +25119,7 @@ _pBot$ = 8						; size = 4
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 16   :     : Goal_Composite<Raven_Bot>(pBot, goal_run_away)
+; 12   :     : Goal_Composite<Raven_Bot>(pBot, goal_run_away)
 
 	push	18					; 00000012H
 	mov	eax, DWORD PTR _pBot$[ebp]
@@ -25128,7 +25128,7 @@ _pBot$ = 8						; size = 4
 	call	??0?$Goal_Composite@VRaven_Bot@@@@QAE@PAVRaven_Bot@@H@Z ; Goal_Composite<Raven_Bot>::Goal_Composite<Raven_Bot>
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 17   : {
+; 13   : {
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx], OFFSET ??_7Goal_RunAway@@6B@
@@ -25137,7 +25137,7 @@ _pBot$ = 8						; size = 4
 	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
 	npad	1
 
-; 18   : }
+; 14   : }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	eax, DWORD PTR _this$[ebp]

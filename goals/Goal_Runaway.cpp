@@ -1,16 +1,12 @@
 #include "Goal_RunAway.h"
 #include "Goal_Think.h"           
-#include "Raven_Goal_Types.h" // 이 줄이 있어야 goal_run_away를 알아듣습니다.
+#include "Raven_Goal_Types.h"
 #include "../Raven_Game.h"
 #include "../Raven_Map.h"
 #include "Goal_MoveToPosition.h"
 #include "Raven_Goal_Types.h"
 #include "misc/Cgdi.h"
 #include "misc/Stream_Utility_Functions.h"
-
-// ============================================================================
-//  Goal_RunAway 구현 (행동 로직)
-// ============================================================================
 
 Goal_RunAway::Goal_RunAway(Raven_Bot* pBot)
     : Goal_Composite<Raven_Bot>(pBot, goal_run_away)

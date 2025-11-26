@@ -30,14 +30,14 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG208627 DB	'Pellet_MaxForce', 00H
-$SG208628 DB	'Pellet_Mass', 00H
-$SG208629 DB	'Pellet_MaxSpeed', 00H
-$SG208630 DB	'Pellet_Scale', 00H
+$SG208629 DB	'Pellet_MaxForce', 00H
+$SG208630 DB	'Pellet_Mass', 00H
+$SG208631 DB	'Pellet_MaxSpeed', 00H
+$SG208632 DB	'Pellet_Scale', 00H
 	ORG $+3
-$SG208631 DB	'Pellet_Damage', 00H
+$SG208633 DB	'Pellet_Damage', 00H
 	ORG $+2
-$SG208632 DB	'Pellet_Persistance', 00H
+$SG208634 DB	'Pellet_Persistance', 00H
 	ORG $+1
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -75,14 +75,14 @@ $SG208632 DB	'Pellet_Persistance', 00H
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG217951 DB	'invalid argument', 00H
+$SG217953 DB	'invalid argument', 00H
 	ORG $+3
-$SG217952 DB	'%s', 00H
+$SG217954 DB	'%s', 00H
 	ORG $+1
-$SG217953 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217955 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG218585 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218587 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1289,11 +1289,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG217951
-	push	OFFSET $SG217952
+	push	OFFSET $SG217953
+	push	OFFSET $SG217954
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG217953
+	push	OFFSET $SG217955
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -5213,18 +5213,6 @@ _target$ = 12						; size = 16
 
 ; 21   :         Raven_Projectile(target,
 
-	push	OFFSET $SG208627
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG208628
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208629
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
@@ -5238,6 +5226,18 @@ _target$ = 12						; size = 16
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208631
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208632
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208633
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -5307,7 +5307,7 @@ _target$ = 12						; size = 16
 ; 31   : 
 ; 32   :         m_dTimeShotIsVisible(script->GetDouble("Pellet_Persistance"))
 
-	push	OFFSET $SG208632
+	push	OFFSET $SG208634
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble

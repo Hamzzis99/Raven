@@ -30,16 +30,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG210278 DB	'invalid argument', 00H
+$SG210280 DB	'invalid argument', 00H
 	ORG $+3
-$SG210279 DB	'%s', 00H
+$SG210281 DB	'%s', 00H
 	ORG $+5
-$SG210280 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG210282 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
-$SG202573 DB	'AT: ', 00H
+$SG202575 DB	'AT: ', 00H
 	ORG $+3
-$SG202574 DB	', ', 00H
+$SG202576 DB	', ', 00H
 	ORG $+1
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -78,7 +78,7 @@ $SG202574 DB	', ', 00H
 	DB	07aH
 	DB	05aH
 	ORG $+4
-$SG210891 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG210893 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -3231,7 +3231,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG210891
+	push	OFFSET $SG210893
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -4227,11 +4227,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG210278
-	push	OFFSET $SG210279
+	push	OFFSET $SG210280
+	push	OFFSET $SG210281
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG210280
+	push	OFFSET $SG210282
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -21005,7 +21005,7 @@ _pBot$ = 24						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR tv161[ebp]
 	push	ecx
-	push	OFFSET $SG202573
+	push	OFFSET $SG202575
 	lea	edx, DWORD PTR $T10[ebp]
 	push	edx
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QBD$$QAV10@@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
@@ -21067,7 +21067,7 @@ _pBot$ = 24						; size = 4
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	mov	ecx, DWORD PTR tv165[ebp]
 	push	ecx
-	push	OFFSET $SG202574
+	push	OFFSET $SG202576
 	push	2
 	lea	edx, DWORD PTR $T4[ebp]
 	push	edx

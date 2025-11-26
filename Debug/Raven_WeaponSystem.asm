@@ -15,18 +15,18 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG221969 DB	'invalid argument', 00H
+$SG221971 DB	'invalid argument', 00H
 ?piecewise_construct@std@@3Upiecewise_construct_t@1@B	ORG $+1 ; std::piecewise_construct
 	ORG $+2
-$SG221970 DB	'%s', 00H
+$SG221972 DB	'%s', 00H
 	ORG $+1
-$SG221971 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG221973 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG223078 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG223080 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
-$SG208778 DB	' ', 00H
+$SG208780 DB	' ', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -3783,7 +3783,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG223078
+	push	OFFSET $SG223080
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -5147,11 +5147,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG221969
-	push	OFFSET $SG221970
+	push	OFFSET $SG221971
+	push	OFFSET $SG221972
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG221971
+	push	OFFSET $SG221973
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -26971,7 +26971,7 @@ $LN7@RenderDesi:
 
 	lea	eax, DWORD PTR _type$11[ebp]
 	push	eax
-	push	OFFSET $SG208778
+	push	OFFSET $SG208780
 	push	2
 	lea	ecx, DWORD PTR _score$12[ebp]
 	push	ecx

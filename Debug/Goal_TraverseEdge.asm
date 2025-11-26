@@ -15,15 +15,15 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG208480 DB	'Bot_MaxSwimmingSpeed', 00H
-$SG208512 DB	00H
+$SG208485 DB	'Bot_MaxSwimmingSpeed', 00H
+$SG208517 DB	00H
 	ORG $+2
-$SG208482 DB	'Bot_MaxCrawlingSpeed', 00H
+$SG208487 DB	'Bot_MaxCrawlingSpeed', 00H
 	ORG $+3
-$SG208510 DB	'BOT ', 00H
+$SG208515 DB	'BOT ', 00H
 	ORG $+3
-$SG208511 DB	' IS STUCK!!', 00H
-$SG208516 DB	'Bot_MaxSpeed', 00H
+$SG208516 DB	' IS STUCK!!', 00H
+$SG208521 DB	'Bot_MaxSpeed', 00H
 	ORG $+3
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -61,14 +61,14 @@ $SG208516 DB	'Bot_MaxSpeed', 00H
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG217542 DB	'invalid argument', 00H
+$SG217547 DB	'invalid argument', 00H
 	ORG $+3
-$SG217543 DB	'%s', 00H
+$SG217548 DB	'%s', 00H
 	ORG $+1
-$SG217544 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217549 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG218212 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218217 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
@@ -3755,7 +3755,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG218212
+	push	OFFSET $SG218217
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -5176,11 +5176,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG217542
-	push	OFFSET $SG217543
+	push	OFFSET $SG217547
+	push	OFFSET $SG217548
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG217544
+	push	OFFSET $SG217549
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -21429,7 +21429,7 @@ _this$ = -4						; size = 4
 ; 141  :   //return max speed back to normal
 ; 142  :   m_pOwner->SetMaxSpeed(script->GetDouble("Bot_MaxSpeed"));
 
-	push	OFFSET $SG208516
+	push	OFFSET $SG208521
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -21602,7 +21602,7 @@ $LN4@Activate:
 ; 42   :     {
 ; 43   :       m_pOwner->SetMaxSpeed(script->GetDouble("Bot_MaxSwimmingSpeed"));
 
-	push	OFFSET $SG208480
+	push	OFFSET $SG208485
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -21625,7 +21625,7 @@ $LN5@Activate:
 ; 49   :     {
 ; 50   :        m_pOwner->SetMaxSpeed(script->GetDouble("Bot_MaxCrawlingSpeed"));
 
-	push	OFFSET $SG208482
+	push	OFFSET $SG208487
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -21883,11 +21883,11 @@ _this$ = -4						; size = 4
 	mov	ecx, DWORD PTR [edx+8]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T1[ebp], eax
-	push	OFFSET $SG208512
-	push	OFFSET $SG208511
+	push	OFFSET $SG208517
+	push	OFFSET $SG208516
 	lea	eax, DWORD PTR $T1[ebp]
 	push	eax
-	push	OFFSET $SG208510
+	push	OFFSET $SG208515
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY04D@DebugConsole@@QAEAAV0@AAY04$$CBD@Z ; DebugConsole::operator<<<char [5]>

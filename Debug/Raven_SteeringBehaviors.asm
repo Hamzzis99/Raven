@@ -30,27 +30,27 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG207198 DB	'WallDetectionFeelerLength', 00H
+$SG207200 DB	'WallDetectionFeelerLength', 00H
 	ORG $+2
-$SG207199 DB	'SeparationWeight', 00H
+$SG207201 DB	'SeparationWeight', 00H
 	ORG $+3
-$SG207200 DB	'WanderWeight', 00H
+$SG207202 DB	'WanderWeight', 00H
 	ORG $+3
-$SG207201 DB	'WallAvoidanceWeight', 00H
-$SG207202 DB	'SeekWeight', 00H
+$SG207203 DB	'WallAvoidanceWeight', 00H
+$SG207204 DB	'SeekWeight', 00H
 	ORG $+1
-$SG207203 DB	'ArriveWeight', 00H
+$SG207205 DB	'ArriveWeight', 00H
 	ORG $+3
-$SG207204 DB	'ViewDistance', 00H
+$SG207206 DB	'ViewDistance', 00H
 	ORG $+3
-$SG216300 DB	'invalid argument', 00H
+$SG216302 DB	'invalid argument', 00H
 	ORG $+3
-$SG216301 DB	'%s', 00H
+$SG216303 DB	'%s', 00H
 	ORG $+5
-$SG216302 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG216304 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG216894 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG216896 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -1237,11 +1237,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG216300
-	push	OFFSET $SG216301
+	push	OFFSET $SG216302
+	push	OFFSET $SG216303
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG216302
+	push	OFFSET $SG216304
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -7419,7 +7419,7 @@ _agent$ = 12						; size = 4
 
 ; 32   :              m_dWallDetectionFeelerLength(script->GetDouble("WallDetectionFeelerLength")),
 
-	push	OFFSET $SG207198
+	push	OFFSET $SG207200
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7452,7 +7452,7 @@ _agent$ = 12						; size = 4
 
 ; 28   :              m_dWeightSeparation(script->GetDouble("SeparationWeight")),
 
-	push	OFFSET $SG207199
+	push	OFFSET $SG207201
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7461,7 +7461,7 @@ _agent$ = 12						; size = 4
 
 ; 29   :              m_dWeightWander(script->GetDouble("WanderWeight")),
 
-	push	OFFSET $SG207200
+	push	OFFSET $SG207202
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7470,7 +7470,7 @@ _agent$ = 12						; size = 4
 
 ; 30   :              m_dWeightWallAvoidance(script->GetDouble("WallAvoidanceWeight")),
 
-	push	OFFSET $SG207201
+	push	OFFSET $SG207203
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7479,7 +7479,7 @@ _agent$ = 12						; size = 4
 
 ; 40   :              m_dWeightSeek(script->GetDouble("SeekWeight")),
 
-	push	OFFSET $SG207202
+	push	OFFSET $SG207204
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7488,7 +7488,7 @@ _agent$ = 12						; size = 4
 
 ; 41   :              m_dWeightArrive(script->GetDouble("ArriveWeight")),
 
-	push	OFFSET $SG207203
+	push	OFFSET $SG207205
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7497,7 +7497,7 @@ _agent$ = 12						; size = 4
 
 ; 31   :              m_dViewDistance(script->GetDouble("ViewDistance")),
 
-	push	OFFSET $SG207204
+	push	OFFSET $SG207206
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble

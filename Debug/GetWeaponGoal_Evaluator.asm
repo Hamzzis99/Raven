@@ -30,20 +30,20 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG207675 DB	'RG: ', 00H
+$SG207679 DB	'RG: ', 00H
 	ORG $+3
-$SG207677 DB	'RL: ', 00H
+$SG207681 DB	'RL: ', 00H
 	ORG $+3
-$SG207679 DB	'SG: ', 00H
+$SG207683 DB	'SG: ', 00H
 	ORG $+3
-$SG217247 DB	'invalid argument', 00H
+$SG217251 DB	'invalid argument', 00H
 	ORG $+3
-$SG217248 DB	'%s', 00H
+$SG217252 DB	'%s', 00H
 	ORG $+5
-$SG217249 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217253 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG217904 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217908 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -3247,7 +3247,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG217904
+	push	OFFSET $SG217908
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -4213,11 +4213,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG217247
-	push	OFFSET $SG217248
+	push	OFFSET $SG217251
+	push	OFFSET $SG217252
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG217249
+	push	OFFSET $SG217253
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -20830,7 +20830,7 @@ $LN4@RenderInfo:
 ; 67   :   case type_rail_gun:
 ; 68   :     s="RG: ";break;
 
-	push	OFFSET $SG207675
+	push	OFFSET $SG207679
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 	npad	1
@@ -20840,7 +20840,7 @@ $LN5@RenderInfo:
 ; 69   :   case type_rocket_launcher:
 ; 70   :     s="RL: "; break;
 
-	push	OFFSET $SG207677
+	push	OFFSET $SG207681
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 	npad	1
@@ -20850,7 +20850,7 @@ $LN6@RenderInfo:
 ; 71   :   case type_shotgun:
 ; 72   :     s="SG: "; break;
 
-	push	OFFSET $SG207679
+	push	OFFSET $SG207683
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 	npad	1

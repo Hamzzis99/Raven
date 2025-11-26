@@ -15,12 +15,12 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG208374 DB	'Goal_GetItem cannot determine item type', 00H
-$SG217384 DB	'invalid argument', 00H
+$SG208379 DB	'Goal_GetItem cannot determine item type', 00H
+$SG217389 DB	'invalid argument', 00H
 	ORG $+3
-$SG217385 DB	'%s', 00H
+$SG217390 DB	'%s', 00H
 	ORG $+1
-$SG217386 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217391 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -59,7 +59,7 @@ $SG217386 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG218031 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218036 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
@@ -4455,7 +4455,7 @@ $LN8@ItemTypeTo:
 ; 32   : 
 ; 33   :   default: throw std::runtime_error("Goal_GetItem cannot determine item type");
 
-	push	OFFSET $SG208374
+	push	OFFSET $SG208379
 	lea	ecx, DWORD PTR $T1[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@

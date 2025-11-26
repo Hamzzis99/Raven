@@ -15,15 +15,15 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG213270 DB	'invalid argument', 00H
+$SG213271 DB	'invalid argument', 00H
 ?piecewise_construct@std@@3Upiecewise_construct_t@1@B	ORG $+1 ; std::piecewise_construct
 	ORG $+2
-$SG213271 DB	'%s', 00H
+$SG213272 DB	'%s', 00H
 	ORG $+1
-$SG213272 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG213273 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG213954 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG213955 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers

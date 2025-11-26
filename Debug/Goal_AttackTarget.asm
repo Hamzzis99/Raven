@@ -15,11 +15,11 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG205165 DB	'invalid argument', 00H
+$SG205175 DB	'invalid argument', 00H
 	ORG $+3
-$SG205166 DB	'%s', 00H
+$SG205176 DB	'%s', 00H
 	ORG $+1
-$SG205167 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG205177 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -134,7 +134,6 @@ PUBLIC	??1runtime_error@std@@UAE@XZ			; std::runtime_error::~runtime_error
 PUBLIC	??0runtime_error@std@@QAE@ABV01@@Z		; std::runtime_error::runtime_error
 PUBLIC	??_Gruntime_error@std@@UAEPAXI@Z		; std::runtime_error::`scalar deleting destructor'
 PUBLIC	?RandFloat@@YANXZ				; RandFloat
-PUBLIC	?RandBool@@YA_NXZ				; RandBool
 PUBLIC	??0Vector2D@@QAE@XZ				; Vector2D::Vector2D
 PUBLIC	?TextAtPos@Cgdi@@QAEXNNABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z ; Cgdi::TextAtPos
 PUBLIC	?TransparentText@Cgdi@@QAEXXZ			; Cgdi::TransparentText
@@ -204,9 +203,6 @@ PUBLIC	??0Goal_HuntTarget@@QAE@PAVRaven_Bot@@@Z	; Goal_HuntTarget::Goal_HuntTarg
 PUBLIC	?Terminate@Goal_HuntTarget@@UAEXXZ		; Goal_HuntTarget::Terminate
 PUBLIC	??1Goal_HuntTarget@@UAE@XZ			; Goal_HuntTarget::~Goal_HuntTarget
 PUBLIC	??_GGoal_HuntTarget@@UAEPAXI@Z			; Goal_HuntTarget::`scalar deleting destructor'
-PUBLIC	??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z	; Goal_DodgeSideToSide::Goal_DodgeSideToSide
-PUBLIC	??1Goal_DodgeSideToSide@@UAE@XZ			; Goal_DodgeSideToSide::~Goal_DodgeSideToSide
-PUBLIC	??_GGoal_DodgeSideToSide@@UAEPAXI@Z		; Goal_DodgeSideToSide::`scalar deleting destructor'
 PUBLIC	??$min@I@std@@YAABIABI0@Z			; std::min<unsigned int>
 PUBLIC	??0?$_List_unchecked_const_iterator@V?$_List_val@U?$_List_simple_types@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@XZ ; std::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<Goal<Raven_Bot> *> >,std::_Iterator_base12>::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<Goal<Raven_Bot> *> >,std::_Iterator_base12>
 PUBLIC	??0?$_List_unchecked_const_iterator@V?$_List_val@U?$_List_simple_types@PAV?$Goal@VRaven_Bot@@@@@std@@@std@@U_Iterator_base12@2@@std@@QAE@PAU?$_List_node@PAV?$Goal@VRaven_Bot@@@@PAX@1@PBV?$_List_val@U?$_List_simple_types@PAV?$Goal@VRaven_Bot@@@@@std@@@1@@Z ; std::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<Goal<Raven_Bot> *> >,std::_Iterator_base12>::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<Goal<Raven_Bot> *> >,std::_Iterator_base12>
@@ -305,7 +301,6 @@ PUBLIC	__CT??_R0?AVruntime_error@std@@@8??0runtime_error@std@@QAE@ABV01@@Z12
 PUBLIC	??_7?$Goal@VRaven_Bot@@@@6B@			; Goal<Raven_Bot>::`vftable'
 PUBLIC	??_7?$Goal_Composite@VRaven_Bot@@@@6B@		; Goal_Composite<Raven_Bot>::`vftable'
 PUBLIC	??_7Goal_HuntTarget@@6B@			; Goal_HuntTarget::`vftable'
-PUBLIC	??_7Goal_DodgeSideToSide@@6B@			; Goal_DodgeSideToSide::`vftable'
 PUBLIC	__TI2?AVruntime_error@std@@
 PUBLIC	__CTA2?AVruntime_error@std@@
 PUBLIC	??_C@_0CB@OHIHCHGJ@Cannot?5add?5goals?5to?5atomic?5goal@ ; `string'
@@ -352,11 +347,6 @@ PUBLIC	??_R0?AVGoal_HuntTarget@@@8			; Goal_HuntTarget `RTTI Type Descriptor'
 PUBLIC	??_R3Goal_HuntTarget@@8				; Goal_HuntTarget::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R2Goal_HuntTarget@@8				; Goal_HuntTarget::`RTTI Base Class Array'
 PUBLIC	??_R1A@?0A@EA@Goal_HuntTarget@@8		; Goal_HuntTarget::`RTTI Base Class Descriptor at (0,-1,0,64)'
-PUBLIC	??_R4Goal_DodgeSideToSide@@6B@			; Goal_DodgeSideToSide::`RTTI Complete Object Locator'
-PUBLIC	??_R0?AVGoal_DodgeSideToSide@@@8		; Goal_DodgeSideToSide `RTTI Type Descriptor'
-PUBLIC	??_R3Goal_DodgeSideToSide@@8			; Goal_DodgeSideToSide::`RTTI Class Hierarchy Descriptor'
-PUBLIC	??_R2Goal_DodgeSideToSide@@8			; Goal_DodgeSideToSide::`RTTI Base Class Array'
-PUBLIC	??_R1A@?0A@EA@Goal_DodgeSideToSide@@8		; Goal_DodgeSideToSide::`RTTI Base Class Descriptor at (0,-1,0,64)'
 PUBLIC	__real@3fe0000000000000
 PUBLIC	__real@4024000000000000
 PUBLIC	__real@402e000000000000
@@ -390,11 +380,6 @@ EXTRN	?Activate@Goal_HuntTarget@@UAEXXZ:PROC		; Goal_HuntTarget::Activate
 EXTRN	?Process@Goal_HuntTarget@@UAEHXZ:PROC		; Goal_HuntTarget::Process
 EXTRN	?Render@Goal_HuntTarget@@UAEXXZ:PROC		; Goal_HuntTarget::Render
 EXTRN	??_EGoal_HuntTarget@@UAEPAXI@Z:PROC		; Goal_HuntTarget::`vector deleting destructor'
-EXTRN	?Activate@Goal_DodgeSideToSide@@UAEXXZ:PROC	; Goal_DodgeSideToSide::Activate
-EXTRN	?Process@Goal_DodgeSideToSide@@UAEHXZ:PROC	; Goal_DodgeSideToSide::Process
-EXTRN	?Render@Goal_DodgeSideToSide@@UAEXXZ:PROC	; Goal_DodgeSideToSide::Render
-EXTRN	?Terminate@Goal_DodgeSideToSide@@UAEXXZ:PROC	; Goal_DodgeSideToSide::Terminate
-EXTRN	??_EGoal_DodgeSideToSide@@UAEPAXI@Z:PROC	; Goal_DodgeSideToSide::`vector deleting destructor'
 EXTRN	@_RTC_CheckStackVars@8:PROC
 EXTRN	@__security_check_cookie@4:PROC
 EXTRN	__CxxThrowException@8:PROC
@@ -429,42 +414,6 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 __RTC_InitBase.rtc$IMZ DD FLAT:__RTC_InitBase
 rtc$IMZ	ENDS
-;	COMDAT ??_R1A@?0A@EA@Goal_DodgeSideToSide@@8
-rdata$r	SEGMENT
-??_R1A@?0A@EA@Goal_DodgeSideToSide@@8 DD FLAT:??_R0?AVGoal_DodgeSideToSide@@@8 ; Goal_DodgeSideToSide::`RTTI Base Class Descriptor at (0,-1,0,64)'
-	DD	01H
-	DD	00H
-	DD	0ffffffffH
-	DD	00H
-	DD	040H
-	DD	FLAT:??_R3Goal_DodgeSideToSide@@8
-rdata$r	ENDS
-;	COMDAT ??_R2Goal_DodgeSideToSide@@8
-rdata$r	SEGMENT
-??_R2Goal_DodgeSideToSide@@8 DD FLAT:??_R1A@?0A@EA@Goal_DodgeSideToSide@@8 ; Goal_DodgeSideToSide::`RTTI Base Class Array'
-	DD	FLAT:??_R1A@?0A@EA@?$Goal@VRaven_Bot@@@@8
-rdata$r	ENDS
-;	COMDAT ??_R3Goal_DodgeSideToSide@@8
-rdata$r	SEGMENT
-??_R3Goal_DodgeSideToSide@@8 DD 00H			; Goal_DodgeSideToSide::`RTTI Class Hierarchy Descriptor'
-	DD	00H
-	DD	02H
-	DD	FLAT:??_R2Goal_DodgeSideToSide@@8
-rdata$r	ENDS
-;	COMDAT ??_R0?AVGoal_DodgeSideToSide@@@8
-data$rs	SEGMENT
-??_R0?AVGoal_DodgeSideToSide@@@8 DD FLAT:??_7type_info@@6B@ ; Goal_DodgeSideToSide `RTTI Type Descriptor'
-	DD	00H
-	DB	'.?AVGoal_DodgeSideToSide@@', 00H
-data$rs	ENDS
-;	COMDAT ??_R4Goal_DodgeSideToSide@@6B@
-rdata$r	SEGMENT
-??_R4Goal_DodgeSideToSide@@6B@ DD 00H			; Goal_DodgeSideToSide::`RTTI Complete Object Locator'
-	DD	00H
-	DD	00H
-	DD	FLAT:??_R0?AVGoal_DodgeSideToSide@@@8
-	DD	FLAT:??_R3Goal_DodgeSideToSide@@8
-rdata$r	ENDS
 ;	COMDAT ??_R1A@?0A@EA@Goal_HuntTarget@@8
 rdata$r	SEGMENT
 ??_R1A@?0A@EA@Goal_HuntTarget@@8 DD FLAT:??_R0?AVGoal_HuntTarget@@@8 ; Goal_HuntTarget::`RTTI Base Class Descriptor at (0,-1,0,64)'
@@ -771,18 +720,6 @@ __TI2?AVruntime_error@std@@ DD 00H
 	DD	00H
 	DD	FLAT:__CTA2?AVruntime_error@std@@
 xdata$x	ENDS
-;	COMDAT ??_7Goal_DodgeSideToSide@@6B@
-CONST	SEGMENT
-??_7Goal_DodgeSideToSide@@6B@ DD FLAT:??_R4Goal_DodgeSideToSide@@6B@ ; Goal_DodgeSideToSide::`vftable'
-	DD	FLAT:??_EGoal_DodgeSideToSide@@UAEPAXI@Z
-	DD	FLAT:?Activate@Goal_DodgeSideToSide@@UAEXXZ
-	DD	FLAT:?Process@Goal_DodgeSideToSide@@UAEHXZ
-	DD	FLAT:?Terminate@Goal_DodgeSideToSide@@UAEXXZ
-	DD	FLAT:?HandleMessage@?$Goal@VRaven_Bot@@@@UAE_NABUTelegram@@@Z
-	DD	FLAT:?AddSubgoal@?$Goal@VRaven_Bot@@@@UAEXPAV1@@Z
-	DD	FLAT:?RenderAtPos@?$Goal@VRaven_Bot@@@@UBEXAAUVector2D@@PAVTypeToString@@@Z
-	DD	FLAT:?Render@Goal_DodgeSideToSide@@UAEXXZ
-CONST	ENDS
 ;	COMDAT ??_7Goal_HuntTarget@@6B@
 CONST	SEGMENT
 ??_7Goal_HuntTarget@@6B@ DD FLAT:??_R4Goal_HuntTarget@@6B@ ; Goal_HuntTarget::`vftable'
@@ -1005,22 +942,6 @@ __ehfuncinfo$??$_Freenode@V?$allocator@U?$_List_node@PAV?$Goal@VRaven_Bot@@@@PAX
 	DD	2 DUP(00H)
 	DD	00H
 	DD	05H
-xdata$x	ENDS
-;	COMDAT voltbl
-voltbl	SEGMENT
-_volmd	DB	016H
-voltbl	ENDS
-;	COMDAT xdata$x
-xdata$x	SEGMENT
-__unwindtable$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z DD 0ffffffffH
-	DD	FLAT:__unwindfunclet$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z$0
-__ehfuncinfo$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z DD 019930522H
-	DD	01H
-	DD	FLAT:__unwindtable$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z
-	DD	2 DUP(00H)
-	DD	2 DUP(00H)
-	DD	00H
-	DD	01H
 xdata$x	ENDS
 voltbl	SEGMENT
 _volmd	DD	0ffffffffH
@@ -1391,11 +1312,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG205165
-	push	OFFSET $SG205166
+	push	OFFSET $SG205175
+	push	OFFSET $SG205176
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG205167
+	push	OFFSET $SG205177
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4578,146 +4499,6 @@ $LN4@min:
 ??$min@I@std@@YAABIABI0@Z ENDP				; std::min<unsigned int>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-;	COMDAT ??_GGoal_DodgeSideToSide@@UAEPAXI@Z
-_TEXT	SEGMENT
-_this$ = -4						; size = 4
-___flags$ = 8						; size = 4
-??_GGoal_DodgeSideToSide@@UAEPAXI@Z PROC		; Goal_DodgeSideToSide::`scalar deleting destructor', COMDAT
-; _this$ = ecx
-	push	ebp
-	mov	ebp, esp
-	push	ecx
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR _this$[ebp], ecx
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	??1Goal_DodgeSideToSide@@UAE@XZ
-	mov	eax, DWORD PTR ___flags$[ebp]
-	and	eax, 1
-	je	SHORT $LN2@scalar
-	push	40					; 00000028H
-	mov	ecx, DWORD PTR _this$[ebp]
-	push	ecx
-	call	??3@YAXPAXI@Z				; operator delete
-	add	esp, 8
-$LN2@scalar:
-	mov	eax, DWORD PTR _this$[ebp]
-	add	esp, 4
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	mov	esp, ebp
-	pop	ebp
-	ret	4
-??_GGoal_DodgeSideToSide@@UAEPAXI@Z ENDP		; Goal_DodgeSideToSide::`scalar deleting destructor'
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu
-;	COMDAT ??1Goal_DodgeSideToSide@@UAE@XZ
-_TEXT	SEGMENT
-_this$ = -4						; size = 4
-??1Goal_DodgeSideToSide@@UAE@XZ PROC			; Goal_DodgeSideToSide::~Goal_DodgeSideToSide, COMDAT
-; _this$ = ecx
-	push	ebp
-	mov	ebp, esp
-	push	ecx
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-	mov	DWORD PTR _this$[ebp], ecx
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	??1?$Goal@VRaven_Bot@@@@UAE@XZ		; Goal<Raven_Bot>::~Goal<Raven_Bot>
-	npad	1
-	add	esp, 4
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-??1Goal_DodgeSideToSide@@UAE@XZ ENDP			; Goal_DodgeSideToSide::~Goal_DodgeSideToSide
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu
-; File C:\Users\Hamzzi\Desktop\AI_Practice\Source\VS2010\Buckland_Chapter7 to 10_Raven\goals\Goal_DodgeSideToSide.h
-;	COMDAT ??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z
-_TEXT	SEGMENT
-_this$ = -16						; size = 4
-__$EHRec$ = -12						; size = 12
-_pBot$ = 8						; size = 4
-??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z PROC	; Goal_DodgeSideToSide::Goal_DodgeSideToSide, COMDAT
-; _this$ = ecx
-
-; 36   :   {}
-
-	push	ebp
-	mov	ebp, esp
-	push	-1
-	push	__ehhandler$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z
-	mov	eax, DWORD PTR fs:0
-	push	eax
-	push	ecx
-	mov	DWORD PTR [ebp-16], -858993460		; ccccccccH
-	mov	eax, DWORD PTR ___security_cookie
-	xor	eax, ebp
-	push	eax
-	lea	eax, DWORD PTR __$EHRec$[ebp]
-	mov	DWORD PTR fs:0, eax
-	mov	DWORD PTR _this$[ebp], ecx
-
-; 34   :   Goal_DodgeSideToSide(Raven_Bot* pBot):Goal<Raven_Bot>(pBot, goal_strafe),
-
-	push	15					; 0000000fH
-	mov	eax, DWORD PTR _pBot$[ebp]
-	push	eax
-	mov	ecx, DWORD PTR _this$[ebp]
-	call	??0?$Goal@VRaven_Bot@@@@QAE@PAVRaven_Bot@@H@Z ; Goal<Raven_Bot>::Goal<Raven_Bot>
-	mov	DWORD PTR __$EHRec$[ebp+8], 0
-
-; 36   :   {}
-
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	DWORD PTR [ecx], OFFSET ??_7Goal_DodgeSideToSide@@6B@
-	mov	ecx, DWORD PTR _this$[ebp]
-	add	ecx, 16					; 00000010H
-	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
-
-; 35   :                                         m_bClockwise(RandBool())
-
-	call	?RandBool@@YA_NXZ			; RandBool
-	mov	edx, DWORD PTR _this$[ebp]
-	mov	BYTE PTR [edx+32], al
-
-; 36   :   {}
-
-	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR __$EHRec$[ebp]
-	mov	DWORD PTR fs:0, ecx
-	pop	ecx
-	add	esp, 16					; 00000010H
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	mov	esp, ebp
-	pop	ebp
-	ret	4
-_TEXT	ENDS
-;	COMDAT text$x
-text$x	SEGMENT
-__unwindfunclet$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z$0:
-	mov	ecx, DWORD PTR _this$[ebp]
-	jmp	??1?$Goal@VRaven_Bot@@@@UAE@XZ		; Goal<Raven_Bot>::~Goal<Raven_Bot>
-	int	3
-	int	3
-	int	3
-	int	3
-	int	3
-__ehhandler$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z:
-	npad	1
-	npad	1
-	mov	edx, DWORD PTR [esp+8]
-	lea	eax, DWORD PTR [edx+12]
-	mov	ecx, DWORD PTR [edx-8]
-	xor	ecx, eax
-	call	@__security_check_cookie@4
-	mov	eax, OFFSET __ehfuncinfo$??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z
-	jmp	___CxxFrameHandler3
-text$x	ENDS
-??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z ENDP	; Goal_DodgeSideToSide::Goal_DodgeSideToSide
-; Function compile flags: /Odtp /RTCsu
 ;	COMDAT ??_GGoal_HuntTarget@@UAEPAXI@Z
 _TEXT	SEGMENT
 _this$ = -4						; size = 4
@@ -4843,7 +4624,7 @@ _this$ = -4						; size = 4
 ?Process@Goal_AttackTarget@@UAEHXZ PROC			; Goal_AttackTarget::Process
 ; _this$ = ecx
 
-; 59   : {
+; 82   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -4851,34 +4632,33 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 60   :   //if status is inactive, call Activate()
-; 61   :   ActivateIfInactive();
+; 83   :     ActivateIfInactive();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ActivateIfInactive@?$Goal@VRaven_Bot@@@@IAEXXZ ; Goal<Raven_Bot>::ActivateIfInactive
 
-; 62   :     
-; 63   :   //process the subgoals
-; 64   :   m_iStatus = ProcessSubgoals();
+; 84   : 
+; 85   :     m_iStatus = ProcessSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ProcessSubgoals@?$Goal_Composite@VRaven_Bot@@@@IAEHXZ ; Goal_Composite<Raven_Bot>::ProcessSubgoals
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], eax
 
-; 65   : 
-; 66   :   ReactivateIfFailed();
+; 86   : 
+; 87   :     // 서브골(이동)이 완료되면 다시 Activate를 호출 -> 다시 랜덤 방향 결정
+; 88   :     ReactivateIfFailed();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ReactivateIfFailed@?$Goal@VRaven_Bot@@@@IAEXXZ ; Goal<Raven_Bot>::ReactivateIfFailed
 
-; 67   : 
-; 68   :   return m_iStatus;
+; 89   : 
+; 90   :     return m_iStatus;
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+12]
 
-; 69   : }
+; 91   : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -4891,23 +4671,25 @@ _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ; File C:\Users\Hamzzi\Desktop\AI_Practice\Source\VS2010\Buckland_Chapter7 to 10_Raven\goals\Goal_AttackTarget.cpp
 _TEXT	SEGMENT
-tv254 = -92						; size = 4
-tv225 = -88						; size = 4
-tv181 = -84						; size = 4
-$T2 = -80						; size = 4
-$T3 = -76						; size = 4
-$T4 = -72						; size = 16
-$T5 = -56						; size = 4
-$T6 = -52						; size = 4
-$T7 = -48						; size = 4
-$T8 = -44						; size = 4
-_dummy$9 = -36						; size = 16
+tv279 = -104						; size = 4
+tv250 = -100						; size = 4
+tv206 = -96						; size = 4
+tv307 = -92						; size = 8
+$T2 = -84						; size = 4
+$T3 = -80						; size = 4
+$T4 = -76						; size = 16
+$T5 = -60						; size = 4
+$T6 = -56						; size = 4
+$T7 = -52						; size = 4
+$T8 = -48						; size = 4
+_bCanStrafe$9 = -41					; size = 1
+_strafePos$10 = -36					; size = 16
 _this$ = -16						; size = 4
 __$EHRec$ = -12						; size = 12
 ?Activate@Goal_AttackTarget@@UAEXXZ PROC		; Goal_AttackTarget::Activate
 ; _this$ = ecx
 
-; 15   : {
+; 13   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -4915,12 +4697,12 @@ __$EHRec$ = -12						; size = 12
 	push	__ehhandler$?Activate@Goal_AttackTarget@@UAEXXZ
 	mov	eax, DWORD PTR fs:0
 	push	eax
-	sub	esp, 80					; 00000050H
+	sub	esp, 92					; 0000005cH
 	push	esi
 	push	edi
 	push	ecx
-	lea	edi, DWORD PTR [ebp-92]
-	mov	ecx, 20					; 00000014H
+	lea	edi, DWORD PTR [ebp-104]
+	mov	ecx, 23					; 00000017H
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	pop	ecx
@@ -4931,24 +4713,20 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 16   :   m_iStatus = active;
+; 14   :     m_iStatus = active;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 0
 
-; 17   : 
-; 18   :   //if this goal is reactivated then there may be some existing subgoals that
-; 19   :   //must be removed
-; 20   :   RemoveAllSubgoals();
+; 15   :     RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 	npad	1
 
-; 21   : 
-; 22   :   //it is possible for a bot's target to die whilst this goal is active so we
-; 23   :   //must test to make sure the bot always has an active target
-; 24   :   if (!m_pOwner->GetTargetSys()->isTargetPresent())
+; 16   : 
+; 17   :     // 1. 타겟이 없으면 종료
+; 18   :     if (!m_pOwner->GetTargetSys()->isTargetPresent())
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -4959,23 +4737,21 @@ __$EHRec$ = -12						; size = 12
 	test	edx, edx
 	jne	SHORT $LN2@Activate
 
-; 25   :   {
-; 26   :      m_iStatus = completed;
+; 19   :     {
+; 20   :         m_iStatus = completed;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 2
 
-; 27   : 
-; 28   :      return;
+; 21   :         return;
 
 	jmp	$LN1@Activate
 $LN2@Activate:
 
-; 29   :   }
-; 30   : 
-; 31   :   //if the bot is able to shoot the target (there is LOS between bot and
-; 32   :   //target), then select a tactic to follow while shooting
-; 33   :   if (m_pOwner->GetTargetSys()->isTargetShootable())
+; 22   :     }
+; 23   : 
+; 24   :     // 2. 적을 쏠 수 있는 상황(전투 모드)인가?
+; 25   :     if (m_pOwner->GetTargetSys()->isTargetShootable())
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -4986,79 +4762,183 @@ $LN2@Activate:
 	test	edx, edx
 	je	$LN3@Activate
 
-; 34   :   {
-; 35   :     //if the bot has space to strafe then do so
-; 36   :     Vector2D dummy;
+; 26   :     {
+; 27   :         // [변수 선언]
+; 28   :         Vector2D strafePos;      // 이동할 좌표를 받아올 변수
 
-	lea	ecx, DWORD PTR _dummy$9[ebp]
+	lea	ecx, DWORD PTR _strafePos$10[ebp]
 	call	??0Vector2D@@QAE@XZ			; Vector2D::Vector2D
-	npad	1
 
-; 37   :     if (m_pOwner->canStepLeft(dummy) || m_pOwner->canStepRight(dummy))
+; 29   :         bool bCanStrafe = false; // "이동할 곳 찾았니?" (처음엔 못 찾음=false)
 
-	lea	eax, DWORD PTR _dummy$9[ebp]
-	push	eax
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [ecx+8]
-	call	?canStepLeft@Raven_Bot@@QBE_NAAUVector2D@@@Z ; Raven_Bot::canStepLeft
-	movzx	edx, al
-	test	edx, edx
-	jne	SHORT $LN7@Activate
-	lea	eax, DWORD PTR _dummy$9[ebp]
+	mov	BYTE PTR _bCanStrafe$9[ebp], 0
+
+; 30   : 
+; 31   :         // =========================================================
+; 32   :         // [랜덤 무빙 로직] 상태 저장 없이 매번 주사위를 굴립니다.
+; 33   :         // =========================================================
+; 34   : 
+; 35   :         // 3. 50% 확률로 "오른쪽 우선" vs "왼쪽 우선" 결정
+; 36   :         if (RandFloat() < 0.5)
+
+	call	?RandFloat@@YANXZ			; RandFloat
+	fstp	QWORD PTR tv307[ebp]
+	movsd	xmm0, QWORD PTR __real@3fe0000000000000
+	comisd	xmm0, QWORD PTR tv307[ebp]
+	jbe	SHORT $LN5@Activate
+
+; 37   :         {
+; 38   :             // [Case A] 오른쪽을 먼저 시도!
+; 39   :             if (m_pOwner->canStepRight(strafePos))
+
+	lea	eax, DWORD PTR _strafePos$10[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
 	call	?canStepRight@Raven_Bot@@QBE_NAAUVector2D@@@Z ; Raven_Bot::canStepRight
 	movzx	edx, al
 	test	edx, edx
-	je	SHORT $LN5@Activate
+	je	SHORT $LN7@Activate
+
+; 40   :             {
+; 41   :                 bCanStrafe = true; // 찾았다!
+
+	mov	BYTE PTR _bCanStrafe$9[ebp], 1
+
+; 42   :             }
+
+	jmp	SHORT $LN9@Activate
 $LN7@Activate:
 
-; 38   :     {
-; 39   :       AddSubgoal(new Goal_DodgeSideToSide(m_pOwner));
+; 43   :             else if (m_pOwner->canStepLeft(strafePos)) // 막혔으면 왼쪽 시도
 
-	push	40					; 00000028H
+	lea	eax, DWORD PTR _strafePos$10[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+8]
+	call	?canStepLeft@Raven_Bot@@QBE_NAAUVector2D@@@Z ; Raven_Bot::canStepLeft
+	movzx	edx, al
+	test	edx, edx
+	je	SHORT $LN9@Activate
+
+; 44   :             {
+; 45   :                 bCanStrafe = true; // 찾았다!
+
+	mov	BYTE PTR _bCanStrafe$9[ebp], 1
+$LN9@Activate:
+
+; 46   :             }
+; 47   :         }
+
+	jmp	SHORT $LN12@Activate
+$LN5@Activate:
+
+; 48   :         else
+; 49   :         {
+; 50   :             // [Case B] 왼쪽을 먼저 시도!
+; 51   :             if (m_pOwner->canStepLeft(strafePos))
+
+	lea	eax, DWORD PTR _strafePos$10[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+8]
+	call	?canStepLeft@Raven_Bot@@QBE_NAAUVector2D@@@Z ; Raven_Bot::canStepLeft
+	movzx	edx, al
+	test	edx, edx
+	je	SHORT $LN10@Activate
+
+; 52   :             {
+; 53   :                 bCanStrafe = true; // 찾았다!
+
+	mov	BYTE PTR _bCanStrafe$9[ebp], 1
+
+; 54   :             }
+
+	jmp	SHORT $LN12@Activate
+$LN10@Activate:
+
+; 55   :             else if (m_pOwner->canStepRight(strafePos)) // 막혔으면 오른쪽 시도
+
+	lea	eax, DWORD PTR _strafePos$10[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+8]
+	call	?canStepRight@Raven_Bot@@QBE_NAAUVector2D@@@Z ; Raven_Bot::canStepRight
+	movzx	edx, al
+	test	edx, edx
+	je	SHORT $LN12@Activate
+
+; 56   :             {
+; 57   :                 bCanStrafe = true; // 찾았다!
+
+	mov	BYTE PTR _bCanStrafe$9[ebp], 1
+$LN12@Activate:
+
+; 58   :             }
+; 59   :         }
+; 60   : 
+; 61   :         // 4. 결정: 무빙할 곳을 찾았으면 그쪽으로, 못 찾았으면 적에게 돌격
+; 62   :         if (bCanStrafe)
+
+	movzx	eax, BYTE PTR _bCanStrafe$9[ebp]
+	test	eax, eax
+	je	SHORT $LN13@Activate
+
+; 63   :         {
+; 64   :             // strafePos에는 canStep 함수가 찾아낸 "옆자리 좌표"가 들어있음
+; 65   :             AddSubgoal(new Goal_SeekToPosition(m_pOwner, strafePos));
+
+	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
 	mov	DWORD PTR $T7[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	cmp	DWORD PTR $T7[ebp], 0
-	je	SHORT $LN9@Activate
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [eax+8]
-	push	ecx
+	je	SHORT $LN16@Activate
+	sub	esp, 16					; 00000010H
+	mov	ecx, esp
+	mov	edx, DWORD PTR _strafePos$10[ebp]
+	mov	DWORD PTR [ecx], edx
+	mov	eax, DWORD PTR _strafePos$10[ebp+4]
+	mov	DWORD PTR [ecx+4], eax
+	mov	edx, DWORD PTR _strafePos$10[ebp+8]
+	mov	DWORD PTR [ecx+8], edx
+	mov	eax, DWORD PTR _strafePos$10[ebp+12]
+	mov	DWORD PTR [ecx+12], eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+8]
+	push	edx
 	mov	ecx, DWORD PTR $T7[ebp]
-	call	??0Goal_DodgeSideToSide@@QAE@PAVRaven_Bot@@@Z ; Goal_DodgeSideToSide::Goal_DodgeSideToSide
-	mov	DWORD PTR tv181[ebp], eax
-	jmp	SHORT $LN10@Activate
-$LN9@Activate:
-	mov	DWORD PTR tv181[ebp], 0
-$LN10@Activate:
-	mov	edx, DWORD PTR tv181[ebp]
-	mov	DWORD PTR $T8[ebp], edx
+	call	??0Goal_SeekToPosition@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_SeekToPosition::Goal_SeekToPosition
+	mov	DWORD PTR tv206[ebp], eax
+	jmp	SHORT $LN17@Activate
+$LN16@Activate:
+	mov	DWORD PTR tv206[ebp], 0
+$LN17@Activate:
+	mov	eax, DWORD PTR tv206[ebp]
+	mov	DWORD PTR $T8[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
-	mov	eax, DWORD PTR $T8[ebp]
-	push	eax
+	mov	ecx, DWORD PTR $T8[ebp]
+	push	ecx
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [edx]
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR [ecx]
-	mov	ecx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR [edx+20]
-	call	eax
+	mov	edx, DWORD PTR [eax+20]
+	call	edx
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 	npad	1
 
-; 40   :     }
+; 66   :         }
 
-	jmp	$LN6@Activate
-$LN5@Activate:
+	jmp	$LN14@Activate
+$LN13@Activate:
 
-; 41   : 
-; 42   :     //if not able to strafe, head directly at the target's position 
-; 43   :     else
-; 44   :     {
-; 45   :       AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_pOwner->GetTargetBot()->Pos()));
+; 67   :         else
+; 68   :         {
+; 69   :             // 공간이 꽉 막혔으면 그냥 적을 향해 전진
+; 70   :             AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_pOwner->GetTargetBot()->Pos()));
 
 	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
@@ -5066,35 +4946,35 @@ $LN5@Activate:
 	mov	DWORD PTR $T5[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 	cmp	DWORD PTR $T5[ebp], 0
-	je	SHORT $LN11@Activate
-	lea	ecx, DWORD PTR $T4[ebp]
-	push	ecx
-	mov	edx, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [edx+8]
+	je	SHORT $LN18@Activate
+	lea	eax, DWORD PTR $T4[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+8]
 	call	?GetTargetBot@Raven_Bot@@QBEQAV1@XZ	; Raven_Bot::GetTargetBot
 	mov	ecx, eax
 	call	?Pos@BaseGameEntity@@QBE?AUVector2D@@XZ	; BaseGameEntity::Pos
 	sub	esp, 16					; 00000010H
-	mov	ecx, esp
-	mov	edx, DWORD PTR [eax]
-	mov	DWORD PTR [ecx], edx
-	mov	edx, DWORD PTR [eax+4]
-	mov	DWORD PTR [ecx+4], edx
-	mov	edx, DWORD PTR [eax+8]
-	mov	DWORD PTR [ecx+8], edx
+	mov	edx, esp
+	mov	ecx, DWORD PTR [eax]
+	mov	DWORD PTR [edx], ecx
+	mov	ecx, DWORD PTR [eax+4]
+	mov	DWORD PTR [edx+4], ecx
+	mov	ecx, DWORD PTR [eax+8]
+	mov	DWORD PTR [edx+8], ecx
 	mov	eax, DWORD PTR [eax+12]
-	mov	DWORD PTR [ecx+12], eax
+	mov	DWORD PTR [edx+12], eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+8]
 	push	edx
 	mov	ecx, DWORD PTR $T5[ebp]
 	call	??0Goal_SeekToPosition@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_SeekToPosition::Goal_SeekToPosition
-	mov	DWORD PTR tv225[ebp], eax
-	jmp	SHORT $LN12@Activate
-$LN11@Activate:
-	mov	DWORD PTR tv225[ebp], 0
-$LN12@Activate:
-	mov	eax, DWORD PTR tv225[ebp]
+	mov	DWORD PTR tv250[ebp], eax
+	jmp	SHORT $LN19@Activate
+$LN18@Activate:
+	mov	DWORD PTR tv250[ebp], 0
+$LN19@Activate:
+	mov	eax, DWORD PTR tv250[ebp]
 	mov	DWORD PTR $T6[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
@@ -5108,19 +4988,18 @@ $LN12@Activate:
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 	npad	1
-$LN6@Activate:
+$LN14@Activate:
 
-; 46   :     }
-; 47   :   }
+; 71   :         }
+; 72   :     }
 
 	jmp	SHORT $LN4@Activate
 $LN3@Activate:
 
-; 48   : 
-; 49   :   //if the target is not visible, go hunt it.
-; 50   :   else
-; 51   :   {
-; 52   :     AddSubgoal(new Goal_HuntTarget(m_pOwner));
+; 73   :     // 5. 적이 안 보이면 추격(Hunt)
+; 74   :     else
+; 75   :     {
+; 76   :         AddSubgoal(new Goal_HuntTarget(m_pOwner));
 
 	push	32					; 00000020H
 	call	??2@YAPAXI@Z				; operator new
@@ -5128,18 +5007,18 @@ $LN3@Activate:
 	mov	DWORD PTR $T2[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 2
 	cmp	DWORD PTR $T2[ebp], 0
-	je	SHORT $LN13@Activate
+	je	SHORT $LN20@Activate
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	push	ecx
 	mov	ecx, DWORD PTR $T2[ebp]
 	call	??0Goal_HuntTarget@@QAE@PAVRaven_Bot@@@Z ; Goal_HuntTarget::Goal_HuntTarget
-	mov	DWORD PTR tv254[ebp], eax
-	jmp	SHORT $LN14@Activate
-$LN13@Activate:
-	mov	DWORD PTR tv254[ebp], 0
-$LN14@Activate:
-	mov	edx, DWORD PTR tv254[ebp]
+	mov	DWORD PTR tv279[ebp], eax
+	jmp	SHORT $LN21@Activate
+$LN20@Activate:
+	mov	DWORD PTR tv279[ebp], 0
+$LN21@Activate:
+	mov	edx, DWORD PTR tv279[ebp]
 	mov	DWORD PTR $T3[ebp], edx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	esi, esp
@@ -5156,13 +5035,13 @@ $LN14@Activate:
 $LN4@Activate:
 $LN1@Activate:
 
-; 53   :   }
-; 54   : }
+; 77   :     }
+; 78   : }
 
 	push	edx
 	mov	ecx, ebp
 	push	eax
-	lea	edx, DWORD PTR $LN21@Activate
+	lea	edx, DWORD PTR $LN28@Activate
 	call	@_RTC_CheckStackVars@8
 	pop	eax
 	pop	edx
@@ -5171,31 +5050,35 @@ $LN1@Activate:
 	pop	ecx
 	pop	edi
 	pop	esi
-	add	esp, 92					; 0000005cH
+	add	esp, 104				; 00000068H
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
 	pop	ebp
 	ret	0
 	npad	1
-$LN21@Activate:
+$LN28@Activate:
 	DD	1
-	DD	$LN20@Activate
-$LN20@Activate:
+	DD	$LN27@Activate
+$LN27@Activate:
 	DD	-36					; ffffffdcH
 	DD	16					; 00000010H
-	DD	$LN18@Activate
-$LN18@Activate:
-	DB	100					; 00000064H
-	DB	117					; 00000075H
-	DB	109					; 0000006dH
-	DB	109					; 0000006dH
-	DB	121					; 00000079H
+	DD	$LN25@Activate
+$LN25@Activate:
+	DB	115					; 00000073H
+	DB	116					; 00000074H
+	DB	114					; 00000072H
+	DB	97					; 00000061H
+	DB	102					; 00000066H
+	DB	101					; 00000065H
+	DB	80					; 00000050H
+	DB	111					; 0000006fH
+	DB	115					; 00000073H
 	DB	0
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?Activate@Goal_AttackTarget@@UAEXXZ$0:
-	push	40					; 00000028H
+	push	48					; 00000030H
 	mov	eax, DWORD PTR $T7[ebp]
 	push	eax
 	call	??3@YAXPAXI@Z				; operator delete
@@ -5225,7 +5108,7 @@ __ehhandler$?Activate@Goal_AttackTarget@@UAEXXZ:
 	npad	1
 	mov	edx, DWORD PTR [esp+8]
 	lea	eax, DWORD PTR [edx+12]
-	mov	ecx, DWORD PTR [edx-92]
+	mov	ecx, DWORD PTR [edx-104]
 	xor	ecx, eax
 	call	@__security_check_cookie@4
 	mov	eax, OFFSET __ehfuncinfo$?Activate@Goal_AttackTarget@@UAEXXZ
@@ -8738,49 +8621,6 @@ _this$ = -4						; size = 4
 	pop	ebp
 	ret	0
 ??0Vector2D@@QAE@XZ ENDP				; Vector2D::Vector2D
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu
-; File C:\Users\Hamzzi\Desktop\AI_Practice\Source\VS2010\Common\misc\utils.h
-;	COMDAT ?RandBool@@YA_NXZ
-_TEXT	SEGMENT
-tv69 = -8						; size = 8
-?RandBool@@YA_NXZ PROC					; RandBool, COMDAT
-
-; 100  : {
-
-	push	ebp
-	mov	ebp, esp
-	sub	esp, 8
-	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
-	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
-
-; 101  :   if (RandFloat() > 0.5) return true;
-
-	call	?RandFloat@@YANXZ			; RandFloat
-	fstp	QWORD PTR tv69[ebp]
-	movsd	xmm0, QWORD PTR tv69[ebp]
-	comisd	xmm0, QWORD PTR __real@3fe0000000000000
-	jbe	SHORT $LN2@RandBool
-	mov	al, 1
-	jmp	SHORT $LN3@RandBool
-	jmp	SHORT $LN3@RandBool
-$LN2@RandBool:
-
-; 102  : 
-; 103  :   else return false;
-
-	xor	al, al
-$LN3@RandBool:
-
-; 104  : }
-
-	add	esp, 8
-	cmp	ebp, esp
-	call	__RTC_CheckEsp
-	mov	esp, ebp
-	pop	ebp
-	ret	0
-?RandBool@@YA_NXZ ENDP					; RandBool
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ; File C:\Users\Hamzzi\Desktop\AI_Practice\Source\VS2010\Common\misc\utils.h

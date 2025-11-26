@@ -3,50 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_MoveToPosition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_MoveToPosition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_SeekToPosition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_SeekToPosition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_DodgeSideToSide.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Explore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_Explore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_AttackTarget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_AttackTarget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_DodgeSideToSide.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_Bot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_Think.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_Think.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Raven_Goal_Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Raven_Goal_Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_Runaway.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -55,45 +11,32 @@
       "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_Runaway.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\Goals\\Goal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_DodgeSideToSide.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_DodgeSideToSide.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_AttackTarget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\navigation\\TimeSlicedGraphAlgorithms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:navigation\\TimeSlicedGraphAlgorithms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_Think.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\navigation\\Raven_PathPlanner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:navigation\\Raven_PathPlanner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_Bot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\Graph\\GraphAlgorithms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:goals\\Goal_AttackTarget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_TargetingSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_TargetingSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_SensoryMemory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_SensoryMemory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_SensoryMemory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_SensoryMemory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\fuzzy\\FuzzySet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC1EBBC4-4F57-4002-856A-5C1BCFBC7BF9}|Raven.vcxproj|solutionrelative:Raven_Bot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -103,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -112,51 +55,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Goal_Explore.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Explore.cpp",
-              "RelativeDocumentMoniker": "goals\\Goal_Explore.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Explore.cpp",
-              "RelativeToolTip": "goals\\Goal_Explore.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T12:35:58.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Goal_MoveToPosition.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_MoveToPosition.cpp",
-              "RelativeDocumentMoniker": "goals\\Goal_MoveToPosition.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_MoveToPosition.cpp",
-              "RelativeToolTip": "goals\\Goal_MoveToPosition.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T12:35:20.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Goal_SeekToPosition.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_SeekToPosition.cpp",
-              "RelativeDocumentMoniker": "goals\\Goal_SeekToPosition.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_SeekToPosition.cpp",
-              "RelativeToolTip": "goals\\Goal_SeekToPosition.cpp",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAwHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T12:34:43.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Goal_DodgeSideToSide.h",
               "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.h",
               "RelativeDocumentMoniker": "goals\\Goal_DodgeSideToSide.h",
               "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.h",
               "RelativeToolTip": "goals\\Goal_DodgeSideToSide.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T12:17:59.688Z"
+              "WhenOpened": "2025-11-26T13:35:12.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Goal_Think.cpp",
+              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.cpp",
+              "RelativeDocumentMoniker": "goals\\Goal_Think.cpp",
+              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.cpp",
+              "RelativeToolTip": "goals\\Goal_Think.cpp",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-26T13:22:47.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Raven_Bot.cpp",
+              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.cpp",
+              "RelativeDocumentMoniker": "Raven_Bot.cpp",
+              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.cpp",
+              "RelativeToolTip": "Raven_Bot.cpp",
+              "ViewState": "AgIAAEwBAAAAAAAAAAAAwFQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-26T13:20:36.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Goal_Runaway.cpp",
+              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.cpp",
+              "RelativeDocumentMoniker": "goals\\Goal_Runaway.cpp",
+              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.cpp",
+              "RelativeToolTip": "goals\\Goal_Runaway.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-26T13:17:23.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Goal_Runaway.h",
+              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.h",
+              "RelativeDocumentMoniker": "goals\\Goal_Runaway.h",
+              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.h",
+              "RelativeToolTip": "goals\\Goal_Runaway.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-26T13:17:21.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -166,237 +125,49 @@
               "RelativeDocumentMoniker": "goals\\Goal_DodgeSideToSide.cpp",
               "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_DodgeSideToSide.cpp",
               "RelativeToolTip": "goals\\Goal_DodgeSideToSide.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T12:17:58.53Z"
+              "WhenOpened": "2025-11-26T13:10:03.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Raven_Bot.h",
+              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.h",
+              "RelativeDocumentMoniker": "Raven_Bot.h",
+              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.h",
+              "RelativeToolTip": "Raven_Bot.h",
+              "ViewState": "AgIAALsAAAAAAAAAAAAAwMQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-26T13:07:14.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Goal_AttackTarget.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.h",
-              "RelativeDocumentMoniker": "goals\\Goal_AttackTarget.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.h",
-              "RelativeToolTip": "goals\\Goal_AttackTarget.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T12:12:33.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Goal_AttackTarget.cpp",
               "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.cpp",
               "RelativeDocumentMoniker": "goals\\Goal_AttackTarget.cpp",
               "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.cpp",
               "RelativeToolTip": "goals\\Goal_AttackTarget.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T12:12:23.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Goal_Runaway.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.cpp",
-              "RelativeDocumentMoniker": "goals\\Goal_Runaway.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.cpp",
-              "RelativeToolTip": "goals\\Goal_Runaway.cpp",
-              "ViewState": "AgIAAGcAAAAAAAAAAADwv4MAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T12:03:11.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Goal_Runaway.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.h",
-              "RelativeDocumentMoniker": "goals\\Goal_Runaway.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Runaway.h",
-              "RelativeToolTip": "goals\\Goal_Runaway.h",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvy0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T12:02:38.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Raven_Goal_Types.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Raven_Goal_Types.h",
-              "RelativeDocumentMoniker": "goals\\Raven_Goal_Types.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Raven_Goal_Types.h",
-              "RelativeToolTip": "goals\\Raven_Goal_Types.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T12:01:37.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Goal.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\Goals\\Goal.h",
-              "RelativeDocumentMoniker": "..\\Common\\Goals\\Goal.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\Goals\\Goal.h",
-              "RelativeToolTip": "..\\Common\\Goals\\Goal.h",
-              "ViewState": "AgIAAF0AAAAAAAAAAADwv2oAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T12:00:06.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Goal_Think.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.cpp",
-              "RelativeDocumentMoniker": "goals\\Goal_Think.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.cpp",
-              "RelativeToolTip": "goals\\Goal_Think.cpp",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAAANcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-26T11:53:12.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Goal_Think.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.h",
-              "RelativeDocumentMoniker": "goals\\Goal_Think.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_Think.h",
-              "RelativeToolTip": "goals\\Goal_Think.h",
-              "ViewState": "AgIAACQAAAAAAAAAAADwvyoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-26T11:52:36.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAN4BAAAAAAAAAAAhwO0BAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-20T05:14:03.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TimeSlicedGraphAlgorithms.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\navigation\\TimeSlicedGraphAlgorithms.h",
-              "RelativeDocumentMoniker": "navigation\\TimeSlicedGraphAlgorithms.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\navigation\\TimeSlicedGraphAlgorithms.h",
-              "RelativeToolTip": "navigation\\TimeSlicedGraphAlgorithms.h",
-              "ViewState": "AgIAABcBAAAAAAAAAAAhwE8BAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-20T05:04:39.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Raven_PathPlanner.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\navigation\\Raven_PathPlanner.cpp",
-              "RelativeDocumentMoniker": "navigation\\Raven_PathPlanner.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\navigation\\Raven_PathPlanner.cpp",
-              "RelativeToolTip": "navigation\\Raven_PathPlanner.cpp",
-              "ViewState": "AgIAAHsBAAAAAAAAAADgv4kBAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-20T04:38:39.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "GraphAlgorithms.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\Graph\\GraphAlgorithms.h",
-              "RelativeDocumentMoniker": "..\\Common\\Graph\\GraphAlgorithms.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\Graph\\GraphAlgorithms.h",
-              "RelativeToolTip": "..\\Common\\Graph\\GraphAlgorithms.h",
-              "ViewState": "AgIAAPYCAAAAAAAAAADwvwADAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-20T04:37:49.476Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Raven_Game.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Game.cpp",
-              "RelativeDocumentMoniker": "Raven_Game.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Game.cpp",
-              "RelativeToolTip": "Raven_Game.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-20T04:14:29.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Raven_Game.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Game.h",
-              "RelativeDocumentMoniker": "Raven_Game.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Game.h",
-              "RelativeToolTip": "Raven_Game.h",
-              "ViewState": "AgIAAJ4AAAAAAAAAAADwv6YAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-20T04:11:54.747Z"
+              "WhenOpened": "2025-11-26T13:04:10.247Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Raven_Bot.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.cpp",
-              "RelativeDocumentMoniker": "Raven_Bot.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_Bot.cpp",
-              "RelativeToolTip": "Raven_Bot.cpp",
-              "ViewState": "AgIAAFYBAAAAAAAAAADgv14BAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-20T04:09:08.516Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Raven_TargetingSystem.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_TargetingSystem.cpp",
-              "RelativeDocumentMoniker": "Raven_TargetingSystem.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_TargetingSystem.cpp",
-              "RelativeToolTip": "Raven_TargetingSystem.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-20T04:08:49.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Raven_SensoryMemory.cpp",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_SensoryMemory.cpp",
-              "RelativeDocumentMoniker": "Raven_SensoryMemory.cpp",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_SensoryMemory.cpp",
-              "RelativeToolTip": "Raven_SensoryMemory.cpp",
-              "ViewState": "AgIAABQBAAAAAAAAAADwvxkBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-20T04:08:15.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Raven_SensoryMemory.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_SensoryMemory.h",
-              "RelativeDocumentMoniker": "Raven_SensoryMemory.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\Raven_SensoryMemory.h",
-              "RelativeToolTip": "Raven_SensoryMemory.h",
-              "ViewState": "AgIAAFYAAAAAAAAAAADwv2AAAAA6AAAAAAAAAA==",
+              "Title": "Goal_AttackTarget.h",
+              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.h",
+              "RelativeDocumentMoniker": "goals\\Goal_AttackTarget.h",
+              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Buckland_Chapter7 to 10_Raven\\goals\\Goal_AttackTarget.h",
+              "RelativeToolTip": "goals\\Goal_AttackTarget.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-20T04:08:02.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FuzzySet.h",
-              "DocumentMoniker": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\fuzzy\\FuzzySet.h",
-              "RelativeDocumentMoniker": "..\\Common\\fuzzy\\FuzzySet.h",
-              "ToolTip": "C:\\Users\\Hamzzi\\Desktop\\AI_Practice\\Source\\VS2010\\Common\\fuzzy\\FuzzySet.h",
-              "RelativeToolTip": "..\\Common\\fuzzy\\FuzzySet.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-20T04:07:44.628Z"
+              "WhenOpened": "2025-11-26T13:03:59.472Z",
+              "EditorCaption": ""
             }
           ]
         }

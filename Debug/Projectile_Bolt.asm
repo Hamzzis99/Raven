@@ -30,16 +30,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG208625 DB	'Bolt_MaxForce', 00H
+$SG208627 DB	'Bolt_MaxForce', 00H
 	ORG $+2
-$SG208626 DB	'Bolt_Mass', 00H
+$SG208628 DB	'Bolt_Mass', 00H
 	ORG $+2
-$SG208627 DB	'Bolt_MaxSpeed', 00H
+$SG208629 DB	'Bolt_MaxSpeed', 00H
 	ORG $+2
-$SG208628 DB	'Bolt_Scale', 00H
+$SG208630 DB	'Bolt_Scale', 00H
 	ORG $+1
-$SG208629 DB	'Bolt_Damage', 00H
-$SG208630 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG208631 DB	'Bolt_Damage', 00H
+$SG208632 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'H', 00H, 'a', 00H, 'm', 00H, 'z'
 	DB	00H, 'z', 00H, 'i', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H
 	DB	'k', 00H, 't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'A', 00H, 'I'
@@ -57,7 +57,7 @@ $SG208630 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'_', 00H, 'B', 00H, 'o', 00H, 'l', 00H, 't', 00H, '.', 00H, 'c'
 	DB	00H, 'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+2
-$SG208631 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
+$SG208633 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
 	DB	' ', 00H, '!', 00H, '=', 00H, ' ', 00H, 'V', 00H, 'e', 00H, 'c'
 	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, '2', 00H, 'D', 00H, '(', 00H
 	DB	')', 00H, 00H, 00H
@@ -98,14 +98,14 @@ $SG208631 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG217935 DB	'invalid argument', 00H
+$SG217937 DB	'invalid argument', 00H
 	ORG $+3
-$SG217936 DB	'%s', 00H
+$SG217938 DB	'%s', 00H
 	ORG $+1
-$SG217937 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG217939 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG218569 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG218571 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1285,11 +1285,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG217935
-	push	OFFSET $SG217936
+	push	OFFSET $SG217937
+	push	OFFSET $SG217938
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG217937
+	push	OFFSET $SG217939
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -5169,18 +5169,6 @@ _target$ = 12						; size = 16
 
 ; 18   :         Raven_Projectile(target,
 
-	push	OFFSET $SG208625
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG208626
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208627
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
@@ -5194,6 +5182,18 @@ _target$ = 12						; size = 16
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
 	push	OFFSET $SG208629
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208630
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG208631
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -5262,8 +5262,8 @@ _target$ = 12						; size = 16
 	test	edx, edx
 	jne	SHORT $LN3@Bolt
 	push	29					; 0000001dH
-	push	OFFSET $SG208630
-	push	OFFSET $SG208631
+	push	OFFSET $SG208632
+	push	OFFSET $SG208633
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN3@Bolt:

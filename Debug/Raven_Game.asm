@@ -15,14 +15,14 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG233491 DB	'invalid argument', 00H
+$SG233497 DB	'invalid argument', 00H
 	ORG $+3
-$SG233492 DB	'%s', 00H
+$SG233498 DB	'%s', 00H
 	ORG $+1
-$SG233493 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG233499 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
-$SG217404 DB	'StartMap', 00H
+$SG217410 DB	'StartMap', 00H
 	ORG $+3
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
 	DB	041H
@@ -61,16 +61,16 @@ $SG217404 DB	'StartMap', 00H
 	DB	07aH
 	DB	05aH
 	ORG $+4
-$SG234297 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG234303 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
-$SG218855 DB	'Map has no spawn points!', 00H
+$SG218861 DB	'Map has no spawn points!', 00H
 	ORG $+3
-$SG218971 DB	'GraveLifetime', 00H
+$SG218977 DB	'GraveLifetime', 00H
 	ORG $+2
-$SG218973 DB	'MaxSearchCyclesPerUpdateStep', 00H
+$SG218979 DB	'MaxSearchCyclesPerUpdateStep', 00H
 	ORG $+3
-$SG218976 DB	'NumBots', 00H
+$SG218982 DB	'NumBots', 00H
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
 	DD	0ff00H
@@ -86,7 +86,7 @@ $SG218976 DB	'NumBots', 00H
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG219915 DB	'Queuing', 00H
+$SG219921 DB	'Queuing', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -2604,11 +2604,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG233491
-	push	OFFSET $SG233492
+	push	OFFSET $SG233497
+	push	OFFSET $SG233498
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG233493
+	push	OFFSET $SG233499
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -26613,7 +26613,7 @@ $LN9@LoadMap:
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	cmp	DWORD PTR $T6[ebp], 0
 	je	SHORT $LN10@LoadMap
-	push	OFFSET $SG218971
+	push	OFFSET $SG218977
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -26642,7 +26642,7 @@ $LN11@LoadMap:
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 	cmp	DWORD PTR $T4[ebp], 0
 	je	SHORT $LN12@LoadMap
-	push	OFFSET $SG218973
+	push	OFFSET $SG218979
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -26710,7 +26710,7 @@ $LN15@LoadMap:
 ; 398  :   { 
 ; 399  :     AddBots(script->GetInt("NumBots"));
 
-	push	OFFSET $SG218976
+	push	OFFSET $SG218982
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -28212,7 +28212,7 @@ $LN23@Render:
 
 ; 793  :       gdi->TextAtPos(GetClientCursorPosition(), "Queuing");
 
-	push	OFFSET $SG219915
+	push	OFFSET $SG219921
 	lea	ecx, DWORD PTR $T16[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
@@ -28578,7 +28578,7 @@ __$EHRec$ = -12						; size = 12
 ; 44   :   //load in the default map
 ; 45   :   LoadMap(script->GetString("StartMap"));
 
-	push	OFFSET $SG217404
+	push	OFFSET $SG217410
 	lea	eax, DWORD PTR $T2[ebp]
 	push	eax
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
@@ -28868,7 +28868,7 @@ _pBot$ = 8						; size = 4
 ; 205  :   {
 ; 206  :     ErrorBox("Map has no spawn points!"); return false;
 
-	push	OFFSET $SG218855
+	push	OFFSET $SG218861
 	call	?ErrorBox@@YAXPAD@Z			; ErrorBox
 	add	esp, 4
 	xor	al, al

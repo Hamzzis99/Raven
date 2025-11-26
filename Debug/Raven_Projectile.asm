@@ -51,14 +51,14 @@ CONST	SEGMENT
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG209496 DB	'invalid argument', 00H
+$SG209498 DB	'invalid argument', 00H
 	ORG $+3
-$SG209497 DB	'%s', 00H
+$SG209499 DB	'%s', 00H
 	ORG $+5
-$SG209498 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG209500 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG210104 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG210106 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
@@ -744,11 +744,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG209496
-	push	OFFSET $SG209497
+	push	OFFSET $SG209498
+	push	OFFSET $SG209499
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG209498
+	push	OFFSET $SG209500
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H

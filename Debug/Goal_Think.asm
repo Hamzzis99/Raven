@@ -51,9 +51,9 @@ CONST	SEGMENT
 	DB	059H
 	DB	07aH
 	DB	05aH
-$SG202069 DB	'<Goal_Think::Arbitrate>: no evaluator selected', 00H
+$SG202070 DB	'<Goal_Think::Arbitrate>: no evaluator selected', 00H
 	ORG $+5
-$SG202070 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG202071 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'H', 00H, 'a', 00H, 'm', 00H, 'z'
 	DB	00H, 'z', 00H, 'i', 00H, '\', 00H, 'D', 00H, 'e', 00H, 's', 00H
 	DB	'k', 00H, 't', 00H, 'o', 00H, 'p', 00H, '\', 00H, 'A', 00H, 'I'
@@ -70,7 +70,7 @@ $SG202070 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	00H, 'T', 00H, 'h', 00H, 'i', 00H, 'n', 00H, 'k', 00H, '.', 00H
 	DB	'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+6
-$SG202071 DB	'M', 00H, 'o', 00H, 's', 00H, 't', 00H, 'D', 00H, 'e', 00H
+$SG202072 DB	'M', 00H, 'o', 00H, 's', 00H, 't', 00H, 'D', 00H, 'e', 00H
 	DB	's', 00H, 'i', 00H, 'r', 00H, 'a', 00H, 'b', 00H, 'l', 00H, 'e'
 	DB	00H, ' ', 00H, '&', 00H, '&', 00H, ' ', 00H, '"', 00H, '<', 00H
 	DB	'G', 00H, 'o', 00H, 'a', 00H, 'l', 00H, '_', 00H, 'T', 00H, 'h'
@@ -81,11 +81,11 @@ $SG202071 DB	'M', 00H, 'o', 00H, 's', 00H, 't', 00H, 'D', 00H, 'e', 00H
 	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, ' ', 00H, 's', 00H, 'e', 00H
 	DB	'l', 00H, 'e', 00H, 'c', 00H, 't', 00H, 'e', 00H, 'd', 00H, '"'
 	DB	00H, 00H, 00H
-$SG210634 DB	'invalid argument', 00H
+$SG210635 DB	'invalid argument', 00H
 	ORG $+3
-$SG210635 DB	'%s', 00H
+$SG210636 DB	'%s', 00H
 	ORG $+5
-$SG210636 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG210637 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
@@ -103,7 +103,7 @@ $SG210636 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG211253 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG211254 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -2497,11 +2497,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG210634
 	push	OFFSET $SG210635
+	push	OFFSET $SG210636
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG210636
+	push	OFFSET $SG210637
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -8334,7 +8334,7 @@ _bias$ = 8						; size = 8
 ??0RunAway_Evaluator@@QAE@N@Z PROC			; RunAway_Evaluator::RunAway_Evaluator, COMDAT
 ; _this$ = ecx
 
-; 39   :     RunAway_Evaluator(double bias) : Goal_Evaluator(bias) {}
+; 33   :     RunAway_Evaluator(double bias) : Goal_Evaluator(bias) {}
 
 	push	ebp
 	mov	ebp, esp
@@ -8734,7 +8734,7 @@ ___flags$ = 8						; size = 4
 	mov	eax, DWORD PTR ___flags$[ebp]
 	and	eax, 1
 	je	SHORT $LN2@scalar
-	push	28					; 0000001cH
+	push	32					; 00000020H
 	mov	ecx, DWORD PTR _this$[ebp]
 	push	ecx
 	call	??3@YAXPAXI@Z				; operator delete
@@ -8779,7 +8779,7 @@ _this$ = -4						; size = 4
 ?Terminate@Goal_AttackTarget@@UAEXXZ PROC		; Goal_AttackTarget::Terminate, COMDAT
 ; _this$ = ecx
 
-; 32   :   void Terminate(){m_iStatus = completed;}
+; 25   :     void Terminate() { m_iStatus = completed; }
 
 	push	ebp
 	mov	ebp, esp
@@ -8801,7 +8801,7 @@ _pOwner$ = 8						; size = 4
 ??0Goal_AttackTarget@@QAE@PAVRaven_Bot@@@Z PROC		; Goal_AttackTarget::Goal_AttackTarget, COMDAT
 ; _this$ = ecx
 
-; 26   :   {}
+; 20   :     {
 
 	push	ebp
 	mov	ebp, esp
@@ -8809,7 +8809,7 @@ _pOwner$ = 8						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 25   :   Goal_AttackTarget(Raven_Bot* pOwner):Goal_Composite<Raven_Bot>(pOwner, goal_attack_target)
+; 18   :         : Goal_Composite<Raven_Bot>(pOwner, goal_attack_target),
 
 	push	13					; 0000000dH
 	mov	eax, DWORD PTR _pOwner$[ebp]
@@ -8817,10 +8817,18 @@ _pOwner$ = 8						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$Goal_Composite@VRaven_Bot@@@@QAE@PAVRaven_Bot@@H@Z ; Goal_Composite<Raven_Bot>::Goal_Composite<Raven_Bot>
 
-; 26   :   {}
+; 20   :     {
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx], OFFSET ??_7Goal_AttackTarget@@6B@
+
+; 19   :         m_bStrafeRight(true) // [추가] 처음엔 오른쪽부터 시작
+
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	BYTE PTR [edx+28], 1
+
+; 21   :     }
+
 	mov	eax, DWORD PTR _this$[ebp]
 	add	esp, 4
 	cmp	ebp, esp
@@ -9934,7 +9942,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 171  :         AddSubgoal(new Goal_AttackTarget(m_pOwner));
 
-	push	28					; 0000001cH
+	push	32					; 00000020H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
 	mov	DWORD PTR $T2[ebp], eax
@@ -9983,7 +9991,7 @@ $LN2@AddGoal_At:
 _TEXT	ENDS
 text$x	SEGMENT
 __unwindfunclet$?AddGoal_AttackTarget@Goal_Think@@QAEXXZ$0:
-	push	28					; 0000001cH
+	push	32					; 00000020H
 	mov	eax, DWORD PTR $T2[ebp]
 	push	eax
 	call	??3@YAXPAXI@Z				; operator delete
@@ -10716,13 +10724,13 @@ $LN3@Arbitrate:
 
 	cmp	DWORD PTR _MostDesirable$[ebp], 0
 	je	SHORT $LN7@Arbitrate
-	mov	edx, OFFSET $SG202069
+	mov	edx, OFFSET $SG202070
 	test	edx, edx
 	jne	SHORT $LN8@Arbitrate
 $LN7@Arbitrate:
 	push	122					; 0000007aH
-	push	OFFSET $SG202070
 	push	OFFSET $SG202071
+	push	OFFSET $SG202072
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN8@Arbitrate:

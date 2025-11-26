@@ -15,14 +15,14 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG213705 DB	'invalid argument', 00H
+$SG213707 DB	'invalid argument', 00H
 	ORG $+3
-$SG213706 DB	'%s', 00H
+$SG213708 DB	'%s', 00H
 	ORG $+1
-$SG213707 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG213709 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG214347 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG214349 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -76,7 +76,7 @@ $SG214347 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG204633 DB	'Bot_TriggerUpdateFreq', 00H
+$SG204635 DB	'Bot_TriggerUpdateFreq', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -1163,11 +1163,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG213705
-	push	OFFSET $SG213706
+	push	OFFSET $SG213707
+	push	OFFSET $SG213708
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG213707
+	push	OFFSET $SG213709
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -3369,7 +3369,7 @@ _range$ = 12						; size = 8
 
 ; 15   :                                      double      range):Trigger_LimitedLifetime<Raven_Bot>(FrameRate /script->GetInt("Bot_TriggerUpdateFreq")),
 
-	push	OFFSET $SG204633
+	push	OFFSET $SG204635
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
