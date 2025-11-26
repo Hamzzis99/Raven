@@ -16,8 +16,6 @@
 #include "GetHealthGoal_Evaluator.h"
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
-
-// [추가됨] 도망가기 전략 헤더 포함
 #include "Goal_RunAway.h" 
 
 

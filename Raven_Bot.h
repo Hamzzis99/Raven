@@ -198,7 +198,8 @@ public:
   bool          canStepRight(Vector2D& PositionOfStep)const;
   bool          canStepForward(Vector2D& PositionOfStep)const;
   bool          canStepBackward(Vector2D& PositionOfStep)const;
-
+  // 사격 금지 스위치 (true면 총을 안 쏨)
+  bool m_bHoldFire;
   
   Raven_Game* const                  GetWorld(){return m_pWorld;} 
   Raven_Steering* const              GetSteering(){return m_pSteering;}
@@ -211,6 +212,9 @@ public:
   Raven_SensoryMemory* const         GetSensoryMem()const{return m_pSensoryMem;}
 
 
+  // [추가] 스위치 켜고 끄는 함수
+  void SetHoldFire(bool b) { m_bHoldFire = b; }
+  bool IsHoldingFire() const { return m_bHoldFire; }
 };
 
 
