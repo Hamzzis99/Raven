@@ -15,11 +15,11 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG205164 DB	'invalid argument', 00H
+$SG205165 DB	'invalid argument', 00H
 	ORG $+3
-$SG205165 DB	'%s', 00H
+$SG205166 DB	'%s', 00H
 	ORG $+1
-$SG205166 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG205167 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -1391,11 +1391,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG205164
 	push	OFFSET $SG205165
+	push	OFFSET $SG205166
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG205166
+	push	OFFSET $SG205167
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H

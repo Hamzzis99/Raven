@@ -73,11 +73,3 @@ Creating a shotgun
 Creating a shotgun
 Creating a rocket_launcher
 maps/Raven_DM1.map loaded okay
-BOT 433 IS STUCK!!
-BOT 403 IS STUCK!!
-BOT 403 IS STUCK!!
-BOT 403 IS STUCK!!
-BOT 433 IS STUCK!!
-BOT 401 IS STUCK!!
-BOT 403 IS STUCK!!
-BOT 401 IS STUCK!!

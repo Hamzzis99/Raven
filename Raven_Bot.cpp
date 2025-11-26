@@ -231,10 +231,6 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
 
       // 1. 체력 감소 (기존 로직)
       ReduceHealth(DereferenceToType<int>(msg.ExtraInfo));
-
-      // =======================================================
-      // [과제 구현] 피격 시 감각 시스템(Memory) 갱신 코드
-      // =======================================================
       {
           // ID를 이용해 나를 쏜 봇 객체(포인터)를 찾음
           Raven_Bot* pShooter = m_pWorld->GetBotFromID(msg.Sender);
@@ -349,6 +345,14 @@ bool Raven_Bot::RotateFacingTowardPosition(Vector2D target)
 //--------------------------------- ReduceHealth ----------------------------
 void Raven_Bot::ReduceHealth(unsigned int val)
 {
+  m_iHealth -= val;
+
+  //// [디버깅용 무적 치트] 체력이 10 이하라면 데미지를 입지 않음!
+  //if (m_iHealth <= 10)
+  //{
+  //    return; // 데미지 무시하고 함수 종료
+  //}
+
   m_iHealth -= val;
 
   if (m_iHealth <= 0)

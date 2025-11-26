@@ -15,18 +15,18 @@ _BSS	SEGMENT
 __Avx2WmemEnabledWeakValue DD 01H DUP (?)
 _BSS	ENDS
 CONST	SEGMENT
-$SG207441 DB	'BOT ', 00H
-$SG207443 DB	00H
+$SG207446 DB	'BOT ', 00H
+$SG207448 DB	00H
 	ORG $+2
-$SG207442 DB	' IS STUCK!!', 00H
-$SG216218 DB	'invalid argument', 00H
+$SG207447 DB	' IS STUCK!!', 00H
+$SG216223 DB	'invalid argument', 00H
 	ORG $+3
-$SG216219 DB	'%s', 00H
+$SG216224 DB	'%s', 00H
 	ORG $+5
-$SG216220 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG216225 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG216888 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG216893 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 	ORG $+2
 ?_Valid_strftime_specifiers@std@@3QBDB DB 061H		; std::_Valid_strftime_specifiers
@@ -3679,7 +3679,7 @@ ___formal$ = 16						; size = 4
 ; 530  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	530					; 00000212H
-	push	OFFSET $SG216888
+	push	OFFSET $SG216893
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -5100,11 +5100,11 @@ $LN2@Allocate_m:
 
 	cmp	DWORD PTR __Ptr_container$[ebp], 0
 	jne	SHORT $LN3@Allocate_m
-	push	OFFSET $SG216218
-	push	OFFSET $SG216219
+	push	OFFSET $SG216223
+	push	OFFSET $SG216224
 	push	0
 	push	190					; 000000beH
-	push	OFFSET $SG216220
+	push	OFFSET $SG216225
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -25187,11 +25187,11 @@ _this$ = -4						; size = 4
 	mov	ecx, DWORD PTR [edx+8]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T1[ebp], eax
-	push	OFFSET $SG207443
-	push	OFFSET $SG207442
+	push	OFFSET $SG207448
+	push	OFFSET $SG207447
 	lea	eax, DWORD PTR $T1[ebp]
 	push	eax
-	push	OFFSET $SG207441
+	push	OFFSET $SG207446
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY04D@DebugConsole@@QAEAAV0@AAY04$$CBD@Z ; DebugConsole::operator<<<char [5]>

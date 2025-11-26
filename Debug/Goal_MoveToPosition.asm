@@ -66,14 +66,14 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG219314 DB	'invalid argument', 00H
+$SG219321 DB	'invalid argument', 00H
 	ORG $+3
-$SG219315 DB	'%s', 00H
+$SG219322 DB	'%s', 00H
 	ORG $+1
-$SG219316 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG219323 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xmemory', 00H
 	ORG $+6
-$SG219961 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG219968 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.44.35207\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
